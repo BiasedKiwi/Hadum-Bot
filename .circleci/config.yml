@@ -46,8 +46,7 @@ jobs:
       - run:
           name: "Build With Docker"
           command:
-            docker run
-            docker build .. --build-arg token=12345
+            docker build /Hadum --build-arg token=12345
       - run:
           name: "Run Tests"
           command: cd src/ && python3 -m unittest discover tests
