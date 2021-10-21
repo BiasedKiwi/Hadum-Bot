@@ -3,15 +3,15 @@
 
 [![CodeFactor](https://www.codefactor.io/repository/github/shadawcraw/hadum/badge?s=673e1108bf1c904c5a6877adc4ea22e51ad34ae9)](https://www.codefactor.io/repository/github/shadawcraw/hadum) ![Python](https://img.shields.io/static/v1?label=Python&message=3.9&color=blue) ![license](https://img.shields.io/static/v1?label=license&message=GPL-3.0&color=success)
 
-A multipurpose bot that makes Discord better for everyone
+👋 Hi! I'm Hadum, a multipurpose Discord bot, written in Python.
 
-## Features
+## 😎 Features
 
-- A Fully Functional Moderation component: manage your staff, members and permissions all in one bot.
-- Memes.
-- Support Chatbot (_Coming Soon™_)
+- 👨‍⚖️ A Fully Functional Moderation component: manage your staff, members and permissions all in one bot.
+- 🗿 Memes.
+- 🤖 Support Chatbot (_Coming Soon™_)
 
-## Commands
+## 👻 Commands
 
 Hadum Features a wide(-ish) set of commands to choose from.
 
@@ -25,7 +25,7 @@ Hadum Features a wide(-ish) set of commands to choose from.
 | massban  |   `h.massban [users]`          | Bans multiple users at a time               |
 | purge    | `h.purge [number_of_messages]` |      Delete messages in the current channel |
 
-## Command Line Args
+## 👩‍💻 Command Line Args
 
 Hadum Features a few CLI args to choose from (more coming soon)
 
@@ -42,7 +42,7 @@ python main.py /[ARG_FLAG]  # Windows
 python3 main.py -[ARG_FLAG] # Linux/Unix-like/Windows WSL
 ```
 
-## Hosting on your own machine
+## 🖥 Hosting on your own machine
 
 So, you edited the code to your own liking and now you want to host it on your own machine? No problem! There are 3 ways of installing the bot:
 
@@ -81,10 +81,6 @@ For an automatic install, run `bash scripts/install.sh` (Linux/Unix or Windows W
 
    5. After that, you're all set! Run the `run.sh` file or enter `python main.py` for Windows and `python3 main.py` for Linux and Unix-like systems.
 
-## Changelog
+## ♻ Changelog
 
 See [CHANGELOG.md](https://github.com/shadawcraw/Hadum/blob/master/CHANGELOG.md)
-
-## Addendum A
-
-Run `docker image ls` to see available images and their IDs
