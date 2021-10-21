@@ -64,6 +64,8 @@ async def on_command_error(ctx: commands.Context, error: commands.CommandError):
         return
     elif isinstance(error, NotImplementedError):
         await ctx.channel.send("Command not yet implemented.")
+    elif isinstance(error, CommandNotFound):
+        pass
     elif args.verbose:
         console.log(f"Unhandled Exception: {error}")
         
