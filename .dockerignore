@@ -1,0 +1,9 @@
+# Do not include local environment variables
+.env
+
+# Do not include the .git folder
+.git
+
+# Do not include files ending in .md EXCEPT for README.md
+*.md
+!README.md
