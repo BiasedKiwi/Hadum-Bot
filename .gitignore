@@ -1,0 +1,7 @@
+SECRET.json
+*.log
+__pycache__
+.env
+.pyc
+.vscode
+.dccache
