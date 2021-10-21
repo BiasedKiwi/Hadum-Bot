@@ -43,5 +43,5 @@ jobs:
             echo "Done"
       - run:
           name: "Run Tests"
-          command: python3 -m unittest discover tests
+          command: cd src/ && python3 -m unittest discover tests
  
