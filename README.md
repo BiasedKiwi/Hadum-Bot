@@ -82,7 +82,7 @@ So, you edited the code to your own liking and now you want to host it on your o
 
    5. After that, you're all set! Run the `run.sh` file or enter `python main.py` for Windows and `python3 main.py` for Linux and Unix-like systems.
 
-## Todo List
+## 📈 Todo List
 
 ### Moderation
 
