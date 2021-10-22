@@ -1,4 +1,5 @@
 ![Hadum](https://github.com/shadawcraw/Hadum/blob/master/assets/logo.png)
+
 # Hadum
 
 [![CodeFactor](https://www.codefactor.io/repository/github/shadawcraw/hadum/badge?s=673e1108bf1c904c5a6877adc4ea22e51ad34ae9)](https://www.codefactor.io/repository/github/shadawcraw/hadum) ![Python](https://img.shields.io/static/v1?label=Python&message=3.9&color=blue) ![license](https://img.shields.io/static/v1?label=license&message=GPL-3.0&color=success)
@@ -7,9 +8,9 @@
 
 ## 😎 Features
 
--   👨‍⚖️ A Fully Functional Moderation component: manage your staff, members and permissions all in one bot.
--   🗿 Memes.
--   🤖 Support Chatbot (_Coming Soon™_)
+- 👨‍⚖️ A Fully Functional Moderation component: manage your staff, members and permissions all in one bot.
+- 🗿 Memes.
+- 🤖 Support Chatbot (_Coming Soon™_)
 
 ## 👻 Commands
 
@@ -19,10 +20,10 @@ Hadum Features a wide(-ish) set of commands to choose from.
 | :------- | :----------------------------: | ------------------------------------------: |
 | ping     |            `h.ping`            | Get Latency between bot and Discord Servers |
 | coinflip |          `h.coinflip`          |                                Flip a coin! |
-| kick     |  `h.kick [user] [reason]`      |                 Kick a user from your guild |
-| masskick |  `h.masskick [users]`          | Kicks multiple users at a time              |
-| ban      |   `h.ban [user] [reason]`      |                     Permanently Bans a user |
-| massban  |   `h.massban [users]`          | Bans multiple users at a time               |
+| kick     |    `h.kick [user] [reason]`    |                 Kick a user from your guild |
+| masskick |      `h.masskick [users]`      |              Kicks multiple users at a time |
+| ban      |    `h.ban [user] [reason]`     |                     Permanently Bans a user |
+| massban  |      `h.massban [users]`       |               Bans multiple users at a time |
 | purge    | `h.purge [number_of_messages]` |      Delete messages in the current channel |
 
 ## 👩‍💻 Command Line Args
@@ -32,7 +33,7 @@ Hadum Features a few CLI args to choose from (more coming soon)
 | Name/Flag |                        Description |
 | :-------- | ---------------------------------: |
 | `-q`      | Skip the 'Hadum' loading animation |
-| `-v`      | Show error logs in console         |
+| `-v`      |         Show error logs in console |
 | `-h`      |                           Get help |
 
 To use them, enter
@@ -47,14 +48,14 @@ python3 main.py -[ARG_FLAG] # Linux/Unix-like/Windows WSL
 So, you edited the code to your own liking and now you want to host it on your own machine? No problem! There are 3 ways of installing the bot:
 
 1. (NOTE: This is now deprecated, use Docker instead.)
-For an automatic install, run `bash scripts/install.sh` (Linux/Unix or Windows WSL only) in the **root directory** of the project
+   For an automatic install, run `bash scripts/install.sh` (Linux/Unix or Windows WSL only) in the **root directory** of the project
 
 2. For a Docker Installation, run the following command (don't ignore comments!):
 
    ```shell
    docker run -it $(docker build --build-args token=BOT_TOKEN -q .)  # Replace 'BOT_TOKEN' with your token.
    ```
-      
+
 3. Or by following the steps below for a manual installation of the bot:
 
    1. Clone the repository using
@@ -80,6 +81,13 @@ For an automatic install, run `bash scripts/install.sh` (Linux/Unix or Windows W
       Remember to put the variable name in ALL CAPS and replace the brackets and the text inside it with your own [token](https://www.writebots.com/discord-bot-token/).
 
    5. After that, you're all set! Run the `run.sh` file or enter `python main.py` for Windows and `python3 main.py` for Linux and Unix-like systems.
+
+## Todo List
+
+### Moderation
+
+[x] Add masskick and massban commands. 
+[ ] Add support for reasons in massban/masskick commands.
 
 ## ♻ Changelog
 
