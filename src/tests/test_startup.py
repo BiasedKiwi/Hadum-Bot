@@ -27,7 +27,7 @@ class TestStartup(unittest.TestCase):
             pass
         self.assertNotEqual(startup.get_token(file="./.env",ask_for_token=False), -1)
         if os.path.exists("./.env"):
-            os.remove("./.env")        
+            os.remove("./.env")  
         
         
 if __name__ == "__main__":

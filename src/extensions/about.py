@@ -8,13 +8,12 @@ console = Console()
 uptime = 0
 
 class About(commands.Cog):
-    """The About Command.
-    """
     def __init__(self, bot: commands.Bot):
+        """The About Command."""
         self.bot = bot
         console.log(__name__.strip("extensions.") + " Cog Online")
         self.get_uptime.start()
-        
+
     @commands.command(name="about")
     async def about(self, ctx: commands.Context):
         embed = nextcord.Embed(title="About this bot.")
