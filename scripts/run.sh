@@ -1,3 +1,5 @@
+#! /bin/bash
+
 if [[ "$OSTYPE" == "win32"* ]]; then
         python main.py
 else

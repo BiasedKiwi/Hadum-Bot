@@ -15,10 +15,8 @@ on_connect_mes = config.get("success_messages", "on_connect")
 on_disconnect_mes = config.get("success_messages", "on_disconnect")
 max_shards= config.getint("config", "max_shards")
 strip_prefix = config.getboolean("config", "strip_after_prefix")
-prefix_items = config.items("prefix")
-prefix = []
-for tuple_ in prefix_items:
-    prefix += tuple_[1]
+prefix_items = dict(config.items("prefix"))
+prefix = list(prefix_items.values())
 
 client  = commands.AutoShardedBot(command_prefix=prefix,
                        case_insensitive=True,
@@ -64,6 +62,8 @@ async def on_command_error(ctx: commands.Context, error: commands.CommandError):
         return
     elif isinstance(error, NotImplementedError):
         await ctx.channel.send("Command not yet implemented.")
+    elif isinstance(error, CommandNotFound):
+        pass
     elif args.verbose:
         console.log(f"Unhandled Exception: {error}")
         
@@ -74,7 +74,7 @@ t1.start()
 utils.load_cogs(client, file_extension=".py", cog_path="extensions", include_folders=True)
 
 try:
-    client.run(utils.get_token("../.env", ask_for_token=True))
+    client.run(utils.get_token("../../.env", ask_for_token=True))
 except TypeError:
     raise KeyError ("Ouch! It seems as if you passed an invalid token! Remember to store it in the 'TOKEN' variable of your .env file")
 t1.join()
