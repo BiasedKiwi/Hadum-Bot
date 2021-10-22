@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   using bot_settings.Json and now uses config.ini
 
+### Removed
+
+-   install.sh
+
 ### Fixed
 
 -   .env related issues
