@@ -86,8 +86,8 @@ So, you edited the code to your own liking and now you want to host it on your o
 
 ### Moderation
 
-[x] Add masskick and massban commands. 
-[ ] Add support for reasons in massban/masskick commands.
+- [x] Add masskick and massban commands. 
+- [ ] Add support for reasons in massban/masskick commands.
 
 ## ♻ Changelog
 
