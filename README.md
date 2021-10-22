@@ -7,9 +7,9 @@
 
 ## 😎 Features
 
-- 👨‍⚖️ A Fully Functional Moderation component: manage your staff, members and permissions all in one bot.
-- 🗿 Memes.
-- 🤖 Support Chatbot (_Coming Soon™_)
+-   👨‍⚖️ A Fully Functional Moderation component: manage your staff, members and permissions all in one bot.
+-   🗿 Memes.
+-   🤖 Support Chatbot (_Coming Soon™_)
 
 ## 👻 Commands
 

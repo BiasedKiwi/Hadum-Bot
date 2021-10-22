@@ -7,7 +7,7 @@ from utils import startup
 client = commands.Bot(command_prefix="", help_command=None)
 
 
-class TestStartup(unittest.TestCase): 
+class TestStartup(unittest.TestCase):
     def test_load_cogs_recursively(self):
         self.assertEqual(startup.load_cogs(client, include_folders=True), 0)
         
@@ -27,9 +27,9 @@ class TestStartup(unittest.TestCase):
             pass
         self.assertNotEqual(startup.get_token(file="./.env",ask_for_token=False), -1)
         if os.path.exists("./.env"):
-            os.remove("./.env")  
-        
-        
+            os.remove("./.env")
+
+
 if __name__ == "__main__":
     unittest.main()
     

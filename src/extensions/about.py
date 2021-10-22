@@ -19,7 +19,6 @@ class About(commands.Cog):
         embed = nextcord.Embed(title="About this bot.")
         embed.add_field(name="Version", value="v0.1.0 (c3b315e/master)")
         embed.add_field(name="Uptime", value=f"The bot has been up for: {datetime.timedelta(seconds=uptime)}")
-        
         await ctx.channel.send(embed=embed)
         
     @loop(seconds=1)
