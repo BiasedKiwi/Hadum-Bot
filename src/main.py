@@ -15,10 +15,8 @@ on_connect_mes = config.get("success_messages", "on_connect")
 on_disconnect_mes = config.get("success_messages", "on_disconnect")
 max_shards= config.getint("config", "max_shards")
 strip_prefix = config.getboolean("config", "strip_after_prefix")
-prefix_items = config.items("prefix")
-prefix = []
-for tuple_ in prefix_items:
-    prefix += tuple_[1]
+prefix_items = dict(config.items("prefix"))
+prefix = list(prefix_items.values())
 
 client  = commands.AutoShardedBot(command_prefix=prefix,
                        case_insensitive=True,
