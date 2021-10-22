@@ -71,7 +71,7 @@ def get_token(file = ".env", *, ask_for_token: bool = False):
         str: Token.
     """     
     try:
-        load_dotenv(f"../{file}")
+        load_dotenv(file)
     except IOError:
         console.log("[red]Could locate the .env file! Please make sure the file is named '.env' and is present in the project root folder.")
         return -1

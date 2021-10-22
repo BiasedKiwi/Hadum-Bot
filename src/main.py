@@ -76,7 +76,7 @@ t1.start()
 utils.load_cogs(client, file_extension=".py", cog_path="extensions", include_folders=True)
 
 try:
-    client.run(utils.get_token("../.env", ask_for_token=True))
+    client.run(utils.get_token("../../.env", ask_for_token=True))
 except TypeError:
     raise KeyError ("Ouch! It seems as if you passed an invalid token! Remember to store it in the 'TOKEN' variable of your .env file")
 t1.join()
