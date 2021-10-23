@@ -118,7 +118,7 @@ class Moderator(commands.Cog):
             [type]: [description]
         """
         if len(args) == 0:
-            await ctx.channel.send(f"You need to specify someone to kick!")
+            await ctx.channel.send("You need to specify someone to kick!")
             return
             
         for item in args:
