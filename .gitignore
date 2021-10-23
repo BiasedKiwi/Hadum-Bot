@@ -5,3 +5,7 @@ __pycache__
 .pyc
 .vscode
 .dccache
+include
+bin
+lib64
+pyvenv.cfg
