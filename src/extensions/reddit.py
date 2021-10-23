@@ -39,6 +39,10 @@ class Reddit(commands.Cog):
         subreddit = await self.reddit.subreddit(sub.strip("r/"))
         
         post = await subreddit.random()
+        if post.over_18 and not ctx.channel.is_nsfw():
+            await ctx.channel.send("Post is NSFW! Call this command in a NSFW Channel.")
+            return 0
+        
         if post.selftext == "":  # If the post contains no text, then post the image associated with it.
             embed = nextcord.Embed(title=post.title, url=post.url)
             embed.set_image(url=post.url)
