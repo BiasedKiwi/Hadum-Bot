@@ -272,7 +272,7 @@ class Moderator(commands.Cog):
             return 0
     
     
-    @commands.command(name="purge", aliases=["delete"])
+    @commands.command(name="purge", aliases=["delete", "clear"])
     @commands.has_permissions(manage_messages=True)
     async def purge(self, ctx: commands.Context, num: int = None):  
         if num is None:
