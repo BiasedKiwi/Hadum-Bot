@@ -25,6 +25,8 @@ Hadum Features a wide(-ish) set of commands to choose from.
 | ban      |    `h.ban [user] [reason]`     |                     Permanently Bans a user |
 | massban  |      `h.massban [users]`       |               Bans multiple users at a time |
 | purge    | `h.purge [number_of_messages]` |      Delete messages in the current channel |
+| meme     | `h.meme`                       |  Get a random meme from r/dankmemes         |
+| reddit   |  `h.reddit [name_of_subreddit]`|  Get a random post from the subreddit entered |
 
 ## 👩‍💻 Command Line Args
 
