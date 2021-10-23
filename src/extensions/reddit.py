@@ -35,7 +35,7 @@ class Reddit(commands.Cog):
 
 
     @commands.command(name="reddit")
-    async def reddit(self, ctx: commands.Context, sub: str):
+    async def reddit_(self, ctx: commands.Context, sub: str):
         subreddit = await self.reddit.subreddit(sub.strip("r/"))
         
         post = await subreddit.random()
