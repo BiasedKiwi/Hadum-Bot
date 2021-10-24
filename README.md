@@ -1,6 +1,6 @@
 ![Hadum](https://github.com/shadawcraw/Hadum/blob/master/assets/logo.png)
 
-# Hadum 
+# Hadum
 
 [![CodeFactor](https://www.codefactor.io/repository/github/shadawcraw/hadum-bot/badge)](https://www.codefactor.io/repository/github/shadawcraw/hadum-bot) ![python](https://img.shields.io/static/v1?label=python&message=^3.8&color=blue) ![license](https://img.shields.io/static/v1?label=license&message=GPL-3.0&color=success) ![build](https://img.shields.io/circleci/build/github/shadawcraw/Hadum-Bot/master)
 
