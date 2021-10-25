@@ -1,13 +1,12 @@
+import configparser
 import os
 import random
-import configparser
-import random
-from nextcord.ext.tasks import loop
 
-import nextcord
 import asyncpraw
+import nextcord
 from dotenv import load_dotenv
 from nextcord.ext import commands
+from nextcord.ext.tasks import loop
 from rich.console import Console
 
 console = Console()
@@ -28,7 +27,7 @@ class Reddit(commands.Cog):
         self.get_memes.start()
         console.log(__name__.strip("extensions.") + " Cog Online")
         
-    @loop(seconds=3600)
+    @loop(seconds=1800)
     async def get_memes(self):
         subreddit = await self.reddit.subreddit(config.get("reddit", "meme_sub"))
         top = subreddit.top(limit=200)
@@ -39,10 +38,10 @@ class Reddit(commands.Cog):
     async def meme(self, ctx: commands.Context):
         meme = random.choice(all_subs)
         
-        embed = nextcord.Embed(title=meme.title)
+        embed = nextcord.Embed(title=meme.title, url="https://www.reddit.com" + meme.permalink)
         embed.set_image(url=meme.url)
+        embed.set_footer(text="Posted in r/dankmemes")
         await ctx.channel.send(embed=embed)
-
 
     @commands.command(name="reddit")
     async def reddit_(self, ctx: commands.Context, sub: str):
