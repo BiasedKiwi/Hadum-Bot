@@ -37,6 +37,7 @@ Hadum Features a few CLI args to choose from (more coming soon)
 | `-q`      | Skip the 'Hadum' loading animation |
 | `-v`      |         Show error logs in console |
 | `-h`      |                           Get help |
+| `-V`      | Show useful info about the bot version  |
 
 To use them, enter
 
