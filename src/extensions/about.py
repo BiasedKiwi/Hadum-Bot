@@ -1,11 +1,15 @@
+import configparser
+import datetime
+
 import nextcord
 from nextcord.ext import commands
 from nextcord.ext.tasks import loop
 from rich.console import Console
-import datetime
 
 console = Console()
 uptime = 0
+config = configparser.ConfigParser()
+config.read("config.ini")
 
 class About(commands.Cog):
     def __init__(self, bot: commands.Bot):
@@ -17,7 +21,7 @@ class About(commands.Cog):
     @commands.command(name="about")
     async def about(self, ctx: commands.Context):
         embed = nextcord.Embed(title="About this bot.")
-        embed.add_field(name="Version", value="v0.1.0 (c3b315e/master)")
+        embed.add_field(name="Version", value=config.get("config", "bot_version"))
         embed.add_field(name="Uptime", value=f"The bot has been up for: {datetime.timedelta(seconds=uptime)}")
         await ctx.channel.send(embed=embed)
         

@@ -37,6 +37,7 @@ Hadum Features a few CLI args to choose from (more coming soon)
 | `-q`      | Skip the 'Hadum' loading animation |
 | `-v`      |         Show error logs in console |
 | `-h`      |                           Get help |
+| `-V`      | Show useful info about the bot version  |
 
 To use them, enter
 
@@ -119,3 +120,7 @@ So, you edited the code to your own liking and now you want to host it on your o
 ## ♻ Changelog
 
 See [CHANGELOG.md](https://github.com/shadawcraw/Hadum/blob/master/CHANGELOG.md)
+
+## License
+
+Hadum is licensed under the GPL v3.0 License. See LICENSE for details.
