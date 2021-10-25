@@ -51,13 +51,19 @@ So, you edited the code to your own liking and now you want to host it on your o
 
 <details>
    <summary>Docker Install.</summary>
+
    1. For a Docker Installation, edit the following lines in your Dockerfile:
 
-   1. Line 16: Replace the brackets and text inside with your own [Discord Bot Token](https://discord.com/developers/applications)
+      1. Line 16: Replace the brackets and text inside with your own [Discord Bot Token](https://discord.com/developers/applications)
 
-   2. Line 18 & 19: Replace the brackets and text inside with your own [Reddit Application Secret and ID](https://www.geeksforgeeks.org/how-to-get-client_id-and-client_secret-for-python-reddit-api-registration/)
+      2. Line 18 & 19: Replace the brackets and text inside with your own [Reddit Application Secret and ID](https://www.geeksforgeeks.org/how-to-get-client_id-and-client_secret-for-python-reddit-api-registration/)
 
-   3. Line 20: Replace the brackets and text inside with your own Reddit Username (don't include 'u/'!!)
+      3. Line 20: Replace the brackets and text inside with your own Reddit Username (don't include 'u/  '!!)
+
+   2. Then, you can build the bot using the following command:
+   ```shell
+   $ docker build .
+   ```
 
 </details>
 
