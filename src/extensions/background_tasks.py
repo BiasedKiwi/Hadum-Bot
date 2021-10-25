@@ -1,8 +1,6 @@
 import configparser
 
-import nextcord
 import psutil
-import rich
 from nextcord.ext import commands
 from nextcord.ext.tasks import loop
 from rich.console import Console

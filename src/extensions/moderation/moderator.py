@@ -118,7 +118,7 @@ class Moderator(commands.Cog):
             [type]: [description]
         """
         if len(args) == 0:
-            await ctx.channel.send(f"You need to specify someone to kick!")
+            await ctx.channel.send("You need to specify someone to kick!")
             return
             
         for item in args:
@@ -272,7 +272,7 @@ class Moderator(commands.Cog):
             return 0
     
     
-    @commands.command(name="purge", aliases=["delete"])
+    @commands.command(name="purge", aliases=["delete", "clear"])
     @commands.has_permissions(manage_messages=True)
     async def purge(self, ctx: commands.Context, num: int = None):  
         if num is None:
