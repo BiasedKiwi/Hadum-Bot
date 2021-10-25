@@ -28,7 +28,7 @@ class Reddit(commands.Cog):
         self.get_memes.start()
         console.log(__name__.strip("extensions.") + " Cog Online")
         
-    @loop(seconds=7200)
+    @loop(seconds=3600)
     async def get_memes(self):
         subreddit = await self.reddit.subreddit(config.get("reddit", "meme_sub"))
         top = subreddit.top(limit=200)
