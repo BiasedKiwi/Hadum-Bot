@@ -1,6 +1,8 @@
 import os
 import random
 import configparser
+import random
+from nextcord.ext.tasks import loop
 
 import nextcord
 import asyncpraw
@@ -12,6 +14,7 @@ console = Console()
 config = configparser.ConfigParser()
 config.read("config.ini")
 load_dotenv()
+all_subs = []
 
 
 class Reddit(commands.Cog):
@@ -22,12 +25,19 @@ class Reddit(commands.Cog):
             client_secret=os.getenv("REDDIT_CLIENT_SECRET"),
             user_agent=f"dankmemes scraper v0.4 by u/{os.getenv('REDDIT_USER_AGENT')}",
         )
+        self.get_memes.start()
         console.log(__name__.strip("extensions.") + " Cog Online")
+        
+    @loop(seconds=3600)
+    async def get_memes(self):
+        subreddit = await self.reddit.subreddit(config.get("reddit", "meme_sub"))
+        top = subreddit.top(limit=200)
+        async for submission in top:
+            all_subs.append(submission)
 
     @commands.command(name="meme")
     async def meme(self, ctx: commands.Context):
-        subreddit = await self.reddit.subreddit(config.get("reddit", "meme_sub"))
-        meme = await subreddit.random()
+        meme = random.choice(all_subs)
         
         embed = nextcord.Embed(title=meme.title)
         embed.set_image(url=meme.url)
