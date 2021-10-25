@@ -8,9 +8,9 @@
 
 ## 😎 Features
 
--   👨‍⚖️ A Fully Functional Moderation component: manage your staff, members and permissions all in one bot.
--   🗿 Memes.
--   🤖 Support Chatbot (_Coming Soon™_)
+- 👨‍⚖️ A Fully Functional Moderation component: manage your staff, members and permissions all in one bot.
+- 🗿 Memes.
+- 🤖 Support Chatbot (_Coming Soon™_)
 
 ## 👻 Commands
 
@@ -47,42 +47,57 @@ python3 main.py -[ARG_FLAG] # Linux/Unix-like/Windows WSL
 
 ## 🖥 Hosting on your own machine
 
-So, you edited the code to your own liking and now you want to host it on your own machine? No problem! There are 3 ways of installing the bot:
+So, you edited the code to your own liking and now you want to host it on your own machine? No problem! There are 2 ways of installing the bot:
 
-1. (NOTE: This is now deprecated, use Docker instead.)
-   For an automatic install, run `bash scripts/install.sh` (Linux/Unix or Windows WSL only) in the **root directory** of the project
+<details>
+   <summary>Docker Install.</summary>
+   1. For a Docker Installation, edit the following lines in your Dockerfile:
 
-2. For a Docker Installation, run the following command (don't ignore comments!):
+   1. Line 16: Replace the brackets and text inside with your own [Discord Bot Token](https://discord.com/developers/applications)
 
-   ```shell
-   docker run -it $(docker build --build-args token=BOT_TOKEN -q .)  # Replace 'BOT_TOKEN' with your token.
-   ```
+   2. Line 18 & 19: Replace the brackets and text inside with your own [Reddit Application Secret and ID](https://www.geeksforgeeks.org/how-to-get-client_id-and-client_secret-for-python-reddit-api-registration/)
 
-3. Or by following the steps below for a manual installation of the bot:
+   3. Line 20: Replace the brackets and text inside with your own Reddit Username (don't include 'u/'!!)
 
-   1. Clone the repository using
+</details>
 
-   ```shell
-   git clone https://github.com/shadawcraw/Hadum.git
-   cd Hadum  # Accessing the project directory
-   ```
+<details>
+   <summary>Manual Install.</summary>
 
-   2. To install the dependencies, Run in the root folder of the project the following command:
+   1. For a manual install, follow these instructions (**NOTE: All the commands that will be mentionned are for Linux only.**):
+      
+      1. Clone the repository using the following commands:
+      ```shell
+      git clone https://github.com/shadawcraw/Hadum-Bot.git  # Clone the repository
+      cd Hadum-Bot  # Access the repository's folder
+      ``` 
 
-   ```shell
-   python -m pip  --no-cache-dir -r requirements.txt  # Windows
-   python3 -m pip3 --no-cache-dir -r requirements.txt # Windows WSL, Linux and UNIX-Like systems (OSX)
-   ```
+      2. Create a file named '.env' in the root folder of the project with the following command:
+      ```shell
+      touch .env
+      ```
 
-   In a Bash/ZSH shell or in Windows WSL.
+      3. Enter the following text inside the file we just created (replace the brackets and text inside with your own info.):
+      ```shell
+      echo TOKEN=[YOUR_DISCORD_BOT_TOKEN] > .env
+      echo REDDIT_CLIENT_SECRET=[YOUR_REDDIT_APPLICATION_SECRET] > .env
+      echo REDDIT_CLIENT_ID=[YOUR_REDDIT_APPLICATION_ID] > .env
+      ```
+      Find out your Reddit Application ID & Secret [with this guide!](https://www.geeksforgeeks.org/how-to-get-client_id-and-client_secret-for-python-reddit-api-registration/)
 
-   3. Then, create a file named ".env" in the **root folder** of the project.
+      4. Install the dependencies using pip (Python ^3.8 required)
+      ```shell
+      pip3 install --no-cache-dir -r requirements.txt
+      ```
 
-   4. Once that is done, enter the following lines into the .env file created earlier:
-      `TOKEN="[YOUR_TOKEN_HERE]"`
-      Remember to put the variable name in ALL CAPS and replace the brackets and the text inside it with your own [token](https://www.writebots.com/discord-bot-token/).
+      5. After that, you're all set! You can now run the bot using the following command:
+      ```shell
+      cd src/
+      python3 main.py -v
+      ```
 
-   5. After that, you're all set! Run the `run.sh` file or enter `python main.py` for Windows and `python3 main.py` for Linux and Unix-like systems.
+</details>
+</br>
 
 ## 📈 Todo List
 
