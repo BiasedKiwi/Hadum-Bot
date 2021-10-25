@@ -119,3 +119,7 @@ So, you edited the code to your own liking and now you want to host it on your o
 ## ♻ Changelog
 
 See [CHANGELOG.md](https://github.com/shadawcraw/Hadum/blob/master/CHANGELOG.md)
+
+## License
+
+Hadum is licensed under the GPL v3.0 License. See LICENSE for details.
