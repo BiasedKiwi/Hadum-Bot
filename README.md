@@ -68,32 +68,32 @@ So, you edited the code to your own liking and now you want to host it on your o
       
       1. Clone the repository using the following commands:
       ```shell
-      git clone https://github.com/shadawcraw/Hadum-Bot.git  # Clone the repository
-      cd Hadum-Bot  # Access the repository's folder
+      $ git clone https://github.com/shadawcraw/Hadum-Bot.git  # Clone the repository
+      $ cd Hadum-Bot  # Access the repository's folder
       ``` 
 
       2. Create a file named '.env' in the root folder of the project with the following command:
       ```shell
-      touch .env
+      $ touch .env
       ```
 
       3. Enter the following text inside the file we just created (replace the brackets and text inside with your own info.):
       ```shell
-      echo TOKEN=[YOUR_DISCORD_BOT_TOKEN] > .env
-      echo REDDIT_CLIENT_SECRET=[YOUR_REDDIT_APPLICATION_SECRET] > .env
-      echo REDDIT_CLIENT_ID=[YOUR_REDDIT_APPLICATION_ID] > .env
+      $ echo TOKEN=[YOUR_DISCORD_BOT_TOKEN] > .env
+      $ echo REDDIT_CLIENT_SECRET=[YOUR_REDDIT_APPLICATION_SECRET] > .env
+      $ echo REDDIT_CLIENT_ID=[YOUR_REDDIT_APPLICATION_ID] > .env
       ```
       Find out your Reddit Application ID & Secret [with this guide!](https://www.geeksforgeeks.org/how-to-get-client_id-and-client_secret-for-python-reddit-api-registration/)
 
       4. Install the dependencies using pip (Python ^3.8 required)
       ```shell
-      pip3 install --no-cache-dir -r requirements.txt
+      $ pip3 install --no-cache-dir -r requirements.txt
       ```
 
       5. After that, you're all set! You can now run the bot using the following command:
       ```shell
-      cd src/
-      python3 main.py -v
+      $ cd src/
+      $ python3 main.py -v
       ```
 
 </details>
