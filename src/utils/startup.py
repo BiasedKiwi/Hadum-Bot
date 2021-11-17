@@ -3,6 +3,7 @@ import time
 from dotenv import load_dotenv
 from nextcord.ext import commands
 from rich.console import Console
+from utils.exceptions import StartupError
 
 console = Console()
 
@@ -45,20 +46,21 @@ def load_cogs(client_var, *, file_extension: str = ".py", cog_path: str = "exten
     try:
         for filename in os.listdir("./" + cog_path + "/"):  # I know this is really messy but I'll try to clean it up later
             if filename.endswith(file_extension):
-                client_var.load_extension(f"{cog_path}.{filename[:-len(file_extension)]}")  # this loop is stolen from youtube
+                if debug and filename == "reddit.py":
+                    break
+                else:
+                    client_var.load_extension(f"{cog_path}.{filename[:-len(file_extension)]}")  # this loop is stolen from youtube
             elif include_folders and os.path.isdir("./" + cog_path + "/" + filename):
                 cwd = os.getcwd()
                 f = filename
                 os.chdir("./" + cog_path + "/" + filename)
                 for filename in os.listdir(os.getcwd()):
                     if filename.endswith(".py"):
-                        if debug and "reddit" in filename:
-                            break
                         client_var.load_extension(f"{cog_path}.{f}.{filename[:-len(file_extension)]}")  # for some reason context managers don't work on os.chdir() might fix.
                 os.chdir(cwd)
                     
     except OSError as e:
-        raise OSError(e)
+        raise StartupError(e)
     
     return 0
             
