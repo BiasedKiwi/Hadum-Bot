@@ -2,7 +2,7 @@
 
 # Hadum
 
-[![CodeFactor](https://www.codefactor.io/repository/github/shadawcraw/hadum-bot/badge)](https://www.codefactor.io/repository/github/shadawcraw/hadum-bot) ![python](https://img.shields.io/static/v1?label=python&message=^3.8&color=blue) ![license](https://img.shields.io/static/v1?label=license&message=GPL-3.0&color=success) ![Build and Test](https://github.com/HadumDev/Hadum-Bot/actions/workflows/run_tests.yml/badge.svg)
+[![CodeFactor](https://www.codefactor.io/repository/github/hadumdev/hadum-bot/badge)](https://www.codefactor.io/repository/github/shadawcraw/hadum-bot) ![python](https://img.shields.io/static/v1?label=python&message=^3.8&color=blue) ![license](https://img.shields.io/static/v1?label=license&message=GPL-3.0&color=success) ![Build and Test](https://github.com/HadumDev/Hadum-Bot/actions/workflows/run_tests.yml/badge.svg)
 
 👋 Hi! I'm Hadum, a multipurpose Discord bot, written in Python.
 
