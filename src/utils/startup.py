@@ -56,6 +56,8 @@ def load_cogs(client_var, *, file_extension: str = ".py", cog_path: str = "exten
                 os.chdir("./" + cog_path + "/" + filename)
                 for filename in os.listdir(os.getcwd()):
                     if filename.endswith(".py"):
+                        if debug and "reddit" in filename:
+                            break
                         client_var.load_extension(f"{cog_path}.{f}.{filename[:-len(file_extension)]}")  # for some reason context managers don't work on os.chdir() might fix.
                 os.chdir(cwd)
                     
