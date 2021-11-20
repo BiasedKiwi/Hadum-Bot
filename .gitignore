@@ -11,3 +11,4 @@ lib64
 pyvenv.cfg
 .pytest_cache
 env
+*.db
