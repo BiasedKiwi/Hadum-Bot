@@ -21,7 +21,7 @@ jobs:
     strategy:
       matrix:
         python_version: ['3.8.6', '3.9.8', '3.10.0']
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        os: [ubuntu-18.04, ubuntu-latest, windows-2022, windows-latest, macos-11, macos-latest]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
