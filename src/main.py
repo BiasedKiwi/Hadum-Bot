@@ -94,10 +94,10 @@ def main():
 
 if __name__ == "__main__":
     if args.version:
+        to_print = ["nextcord", "rich", "psutil"]
         console.print("bot: " + config.get("config", "bot_version"))
-        console.print("nextcord: " + version("nextcord"))
-        console.print("rich: " + version("rich"))
-        console.print("psutil: " + version("psutil"))
+        for i in to_print:
+            console.print(i + ": " + version(i))
         console.print("python: " + py_ver)
     else:
         main()
