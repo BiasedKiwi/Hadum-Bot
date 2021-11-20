@@ -1,22 +1,23 @@
 import asyncio
 import aiosqlite
+from aiosqlite.core import Connection
        
        
 class SQLError(Exception):
-    pass        
+    pass    
 
 
-async def run(command: str = None, db: str = "../hadum.db"):
-    if command is None:
-        raise SQLError("No SQLite command specified")
-    cursor = await aiosqlite.connect("../hadum.db")
-    await cursor.execute(command)
+async def connect(db: str = "../hadum.db", debug: bool = False):
+    conn = await aiosqlite.connect(db)
+    if debug:
+        print(conn, type(conn))
+    return conn
     
     
-def main():
+def main(debug: bool = True):
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(run())
+    loop.run_until_complete(connect(debug=debug))
     loop.close()
         
 if __name__ == "__main__":
-    main()
+    main(True)
