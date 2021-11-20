@@ -15,8 +15,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "test"
-  test:
+  test on Ubuntu:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -33,3 +32,16 @@ jobs:
       - name: Test
         run: |
           cd src/ && python3 -m unittest discover tests
+
+  test on Windows:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install Depndencies
+        run: pip install -r requirements.txt --no-cache-dir
+
+      - name: Test
+        run: |
+          cd src/ && python -m unittest discover tests
