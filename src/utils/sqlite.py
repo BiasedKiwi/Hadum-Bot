@@ -18,6 +18,8 @@ def main(debug: bool = True):
     loop = asyncio.get_event_loop()
     loop.run_until_complete(connect(debug=debug))
     loop.close()
+    
+connection_base = connect()
         
 if __name__ == "__main__":
     main(True)
