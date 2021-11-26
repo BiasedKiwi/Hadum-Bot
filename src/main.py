@@ -15,7 +15,7 @@ import utils
 now = datetime.now()
 logger = logging.getLogger("nextcord")
 logger.setLevel(logging.DEBUG)
-handler = logging.FileHandler(filename=f"../logs/{now.strftime('%d-%m-%Y_%H-%M-%S')}.log/", encoding="utf-8", mode="w")
+handler = logging.FileHandler(filename=f"../logs/{now.strftime('%Y-%m-%d_%H-%M-%S')}.log/", encoding="utf-8", mode="w")
 handler.setFormatter(logging.Formatter("%(asctime)s:%(levelname)s:%(name)s: %(message)s"))
 logger.addHandler(handler)
 config = configparser.ConfigParser()
