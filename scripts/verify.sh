@@ -4,5 +4,5 @@
 # Checksums generated on 03/12/21
 echo Verifying integrity of files...
 cd ../
-sha256sum -c scripts/checksums.txt || echo "Test failed! This may happen if you modified the files."
+sha256sum -c scripts/checksums.txt || echo -e "Test failed! This may happen if you modified the files.\033[0;31m Checksums file hash may not match" && exit 0
 echo Integrity verified!
