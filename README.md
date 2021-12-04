@@ -6,6 +6,10 @@
 
 👋 Hi! I'm Hadum, a multipurpose Discord bot, written in Python.
 
+## 🏗 Note
+
+This bot is still in heavy development and has no "actual" release yet, be sure to come back once in a while!
+
 ## 😎 Features
 
 - 👨‍⚖️ A Fully Functional Moderation component: manage your staff, members and permissions all in one bot.
