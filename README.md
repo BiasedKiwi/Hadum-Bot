@@ -2,9 +2,13 @@
 
 # Hadum
 
-[![CodeFactor](https://www.codefactor.io/repository/github/hadumdev/hadum-bot/badge)](https://www.codefactor.io/repository/github/shadawcraw/hadum-bot) ![python](https://img.shields.io/static/v1?label=python&message=^3.8&color=blue) ![license](https://img.shields.io/static/v1?label=license&message=GPL-3.0&color=success) ![build](https://github.com/HadumDev/Hadum-Bot/actions/workflows/run_tests.yml/badge.svg)
+[![CodeFactor](https://www.codefactor.io/repository/github/hadumdev/hadum-bot/badge)](https://www.codefactor.io/repository/github/shadawcraw/hadum-bot) ![python](https://img.shields.io/static/v1?label=python&message=^3.8&color=blue) ![license](https://img.shields.io/static/v1?label=license&message=GPL-3.0&color=success) ![build](https://github.com/HadumDev/Hadum-Bot/actions/workflows/run_tests.yml/badge.svg) ![CodeQL Analysis](https://github.com/HadumDev/Hadum-Bot/actions/workflows/codeql-analysis.yml/badge.svg)
 
 👋 Hi! I'm Hadum, a multipurpose Discord bot, written in Python.
+
+## 🏗 Note
+
+This bot is still in heavy development and has no "actual" release yet, be sure to come back once in a while!
 
 ## 😎 Features
 
@@ -119,7 +123,7 @@ So, you edited the code to your own liking and now you want to host it on your o
 
 ## ♻ Changelog
 
-See [CHANGELOG.md](https://github.com/shadawcraw/Hadum/blob/master/CHANGELOG.md)
+See [CHANGELOG.md](https://github.com/shadawcraw/Hadum/blob/master/CHANGELOG.md) 
 
 ## License
 
