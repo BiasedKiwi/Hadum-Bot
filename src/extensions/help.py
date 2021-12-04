@@ -13,7 +13,8 @@ class Help(commands.Cog):
         
     @commands.group(name="help", aliases=["cmds", "commands"])
     async def help_(self, ctx: commands.Context):
-        def gen_field(name, value): return embed.add_field(name=name, value=value, inline=True)
+        def gen_field(name, value): 
+            return embed.add_field(name=name, value=value, inline=True)
         
         if ctx.invoked_subcommand is None:
             embed = nextcord.Embed(title="Hadum Commands")
