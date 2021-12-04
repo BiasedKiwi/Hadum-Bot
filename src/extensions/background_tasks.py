@@ -24,7 +24,7 @@ class BackgroundTasks(commands.Cog):
         cpu_usage = psutil.cpu_percent(4)
         ram_percent = psutil.virtual_memory()[2]
         
-        console.rule("Status Report")
+        console.rule("Performance Log")
         console.print(f"Latency: {latency}ms")
         console.print(f"CPU Usage %: {cpu_usage}")
         console.print(f"RAM Usage %: {ram_percent}")
