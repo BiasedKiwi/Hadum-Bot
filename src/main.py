@@ -25,6 +25,7 @@ on_connect_mes = config.get("success_messages", "on_connect")
 on_disconnect_mes = config.get("success_messages", "on_disconnect")
 max_shards= config.getint("config", "max_shards")
 strip_prefix = config.getboolean("config", "strip_after_prefix")
+load_exts = config.getboolean("extensions", "load_extensions")
 prefix_items = dict(config.items("prefix"))
 prefix = list(prefix_items.values())
 
@@ -83,7 +84,8 @@ def main():
 
     t1 = threading.Thread(target=utils.initial_load(debug=args.quiet))
     t1.start()
-    utils.load_cogs(client, file_extension=".py", cog_path="extensions", include_folders=True)
+    if load_exts:
+        utils.load_cogs(client, file_extension=".py", cog_path="extensions", include_folders=True)
 
     try:
         client.run(utils.get_token("../../.env", ask_for_token=True))
