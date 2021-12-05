@@ -45,7 +45,7 @@ class Miscellaneous(commands.Cog):
             Int: Exit Code
         """
         choice = random.choice(["Heads", "Tails"])
-        author_name = ctx.message.author.name
+        author_name = ctx.message.author.name + "#" + ctx.message.author.discriminator
         if author_name not in self.coinflip_streak:
             self.coinflip_streak[author_name] = {
                 "last_choice": choice,
