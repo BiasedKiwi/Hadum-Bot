@@ -56,10 +56,7 @@ class Miscellaneous(commands.Cog):
         else:
             self.coinflip_streak[author_name]["streak"] = 1
         streak = self.coinflip_streak[author_name]["streak"]
-        if streak == 1 and choice != self.coinflip_streak[author_name]["last_choice"]:
-            msg = "Ohh! You lost your streak... It's now at 0."
-        else:
-            msg = f"You have a streak of {streak}"
+        msg = f"You have a streak of {streak}"
         embed = nextcord.Embed(title=f"It's {choice}!", description=msg)
         embed.set_footer(text=f"Invoked by {ctx.author.display_name}")
         
