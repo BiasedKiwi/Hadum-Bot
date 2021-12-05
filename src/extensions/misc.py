@@ -14,6 +14,7 @@ class Miscellaneous(commands.Cog):
         commands (module): Parent Class
     """
     def __init__(self, bot:commands.Bot):
+        self.coinflip_streak = {}
         self.bot = bot
         console.log(__name__.strip("extensions.") + " Cog Online")
 
@@ -43,7 +44,23 @@ class Miscellaneous(commands.Cog):
         Returns:
             Int: Exit Code
         """
-        embed = nextcord.Embed(title=f"It's {random.choice(['Heads', 'Tails'])}!")
+        choice = random.choice(["Heads", "Tails"])
+        author_name = ctx.message.author.name
+        if author_name not in self.coinflip_streak:
+            self.coinflip_streak[author_name] = {
+                "last_choice": choice,
+                "streak": 0
+            }
+        if self.coinflip_streak[author_name]["last_choice"] == choice:
+            self.coinflip_streak[author_name]["streak"] += 1
+        else:
+            self.coinflip_streak[author_name]["streak"] = 1
+        streak = self.coinflip_streak[author_name]["streak"]
+        if streak == 1 and choice != self.coinflip_streak[author_name]["last_choice"]:
+            msg = "Ohh! You lost your streak... It's now at 0."
+        else:
+            msg = f"You have a streak of {streak}"
+        embed = nextcord.Embed(title=f"It's {choice}!", description=msg)
         embed.set_footer(text=f"Invoked by {ctx.author.display_name}")
         
         await ctx.channel.send(embed=embed)
