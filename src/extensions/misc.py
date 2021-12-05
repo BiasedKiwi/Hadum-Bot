@@ -55,10 +55,12 @@ class Miscellaneous(commands.Cog):
             self.coinflip_streak[author_name]["streak"] += 1
         else:
             self.coinflip_streak[author_name]["streak"] = 1
+            self.coinflip_streak[author_name]["last_choice"] = choice
         streak = self.coinflip_streak[author_name]["streak"]
         msg = f"You have a streak of {streak}"
         embed = nextcord.Embed(title=f"It's {choice}!", description=msg)
         embed.set_footer(text=f"Invoked by {ctx.author.display_name}")
+        await ctx.channel.send(self.coinflip_streak)
         
         await ctx.channel.send(embed=embed)
         return 0
