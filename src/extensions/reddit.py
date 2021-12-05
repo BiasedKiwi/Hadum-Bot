@@ -33,7 +33,7 @@ class Reddit(commands.Cog):
     @loop(seconds=1800)
     async def get_memes(self):
         subreddit = await self.reddit.subreddit(config.get("reddit", "meme_sub"))
-        top = subreddit.hot(limit=100)
+        top = subreddit.hot(limit=config.getint("reddit", "meme_fetch_limit"))
         async for submission in top:
             all_subs.append(submission)
 
