@@ -60,7 +60,6 @@ class Miscellaneous(commands.Cog):
         msg = f"You have a streak of {streak}"
         embed = nextcord.Embed(title=f"It's {choice}!", description=msg)
         embed.set_footer(text=f"Invoked by {ctx.author.display_name}")
-        await ctx.channel.send(self.coinflip_streak)
         
         await ctx.channel.send(embed=embed)
         return 0
