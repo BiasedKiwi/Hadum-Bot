@@ -1,10 +1,16 @@
 ![Hadum](https://github.com/shadawcraw/Hadum/blob/master/assets/logo.png)
 
-# Hadum
+<h1 align="center">Hadum</h1>
 
-[![CodeFactor](https://www.codefactor.io/repository/github/hadumdev/hadum-bot/badge)](https://www.codefactor.io/repository/github/shadawcraw/hadum-bot) ![python](https://img.shields.io/static/v1?label=python&message=^3.8&color=blue) ![license](https://img.shields.io/static/v1?label=license&message=GPL-3.0&color=success) ![build](https://github.com/HadumDev/Hadum-Bot/actions/workflows/run_tests.yml/badge.svg) ![CodeQL Analysis](https://github.com/HadumDev/Hadum-Bot/actions/workflows/codeql-analysis.yml/badge.svg)
+<h4 align="center">👋 Hi! I'm Hadum, a multipurpose Discord bot, written in Python.</h4>
 
-👋 Hi! I'm Hadum, a multipurpose Discord bot, written in Python.
+<h1 align="center">
+<img src="https://www.codefactor.io/repository/github/hadumdev/hadum-bot/badge">
+<img src="https://img.shields.io/static/v1?label=python&message=^3.8&color=blue">
+<img src="https://img.shields.io/static/v1?label=license&message=GPL-3.0&color=success">
+<img src="https://github.com/HadumDev/Hadum-Bot/actions/workflows/run_tests.yml/badge.svg">
+<img src="https://github.com/HadumDev/Hadum-Bot/actions/workflows/codeql-analysis.yml/badge.svg">
+</h1>
 
 ## 🏗 Note
 
