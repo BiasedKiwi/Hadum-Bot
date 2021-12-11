@@ -46,7 +46,7 @@ def load_cogs(client_var, *, file_extension: str = ".py", cog_path: str = "exten
     try:
         for filename in os.listdir("./" + cog_path + "/"):  # I know this is really messy but I'll try to clean it up later
             if filename.endswith(file_extension):
-                if debug and filename == "reddit.py":
+                if debug and filename == "reddit.py":  # TODO: Fix this
                     break
                 else:
                     client_var.load_extension(f"{cog_path}.{filename[:-len(file_extension)]}")  # this loop is stolen from youtube
