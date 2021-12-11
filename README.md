@@ -37,6 +37,7 @@ Hadum Features a wide(-ish) set of commands to choose from.
 | purge    | `h.purge [number_of_messages]` |       Delete messages in the current channel |
 | meme     |            `h.meme`            |           Get a random meme from r/dankmemes |
 | reddit   | `h.reddit [name_of_subreddit]` | Get a random post from the subreddit entered |
+| autopostmeme | `h.reddit [n_of_memes]`    | Get memes witthout even asking for them!     |
 
 ## 👩‍💻 Command Line Args
 
