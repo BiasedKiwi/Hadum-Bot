@@ -8,11 +8,21 @@ console = Console()
 
 class Help(commands.Cog):
     def __init__(self, bot:commands.Bot):
+        """Help command
+
+        Args:
+            bot (commands.Bot): Bot instance
+        """
         self.bot = bot
         console.log(__name__.strip("extensions.") + " Cog Online")
         
     @commands.group(name="help", aliases=["cmds", "commands"])
     async def help_(self, ctx: commands.Context):
+        """Help command
+
+        Args:
+            ctx (commands.Context): Command context
+        """
         def gen_field(name, value): 
             return embed.add_field(name=name, value=value, inline=True)
         
@@ -27,6 +37,14 @@ class Help(commands.Cog):
         
     @help_.command(name="moderation")
     async def moderation(self, ctx: commands.Context):
+        """Moderation section of the help commands
+
+        Args:
+            ctx (commands.Context): Command context
+
+        Returns:
+            Int: Exit code
+        """
         embed = nextcord.Embed(title="Moderation Commands")
         embed.add_field(name="ban", value="Permanently Ban a user.\n Usage: `h.ban [USER] [REASON]`", inline=False)
         embed.add_field(name="kick", value="Kick a user.\n Usage: `h.kick [USER] [REASON]`", inline=False)
@@ -37,6 +55,14 @@ class Help(commands.Cog):
     
     @help_.command(name="misc")
     async def misc(self, ctx: commands.Context):
+        """Misc section of the help command
+
+        Args:
+            ctx (commands.Context): Command context
+
+        Returns:
+            Int: Exit code
+        """
         embed = nextcord.Embed(title="Miscellaneous Commands")
         embed.add_field(name="ping", value="Get the latency between the bot and Discord Servers.\n Usage: `h.ping`", inline=False)
         embed.add_field(name="coinflip", value="Flip a coin!\n Usage: `h.coinflip`", inline=False)
@@ -46,6 +72,14 @@ class Help(commands.Cog):
     
     @help_.command(name="reddit")
     async def reddit_(self, ctx: commands.Context):
+        """Reddit section of the help command
+
+        Args:
+            ctx (commands.Context): Command context
+
+        Returns:
+            Int: Exit code
+        """
         embed = nextcord.Embed(title="Miscellaneous Commands")
         embed.add_field(name="meme", value="Get a random meme!\n Usage: `h.meme`", inline=False)
         embed.add_field(name="reddit", value="Get a random post from the subreddit entered!\n Usage: `h.reddit [SUBREDDIT]`", inline=False)

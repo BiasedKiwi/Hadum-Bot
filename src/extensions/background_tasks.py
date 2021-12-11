@@ -12,6 +12,11 @@ on = config.getboolean("config", "background_tasks")
 
 class BackgroundTasks(commands.Cog):
     def __init__(self, bot:commands.Bot):
+        """Background tasks
+
+        Args:
+            bot (commands.Bot): Bot instance
+        """
         self.bot = bot
         console.log(__name__.strip("extensions.") + " Cog Online")
         

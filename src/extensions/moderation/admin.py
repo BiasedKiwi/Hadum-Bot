@@ -9,7 +9,7 @@ console = Console()
 
 class Administrator(commands.Cog):
     def __init__(self, bot:commands.Bot):
-        """A collection of Administrator commands
+        """A collection of Administrator commands (temporary)
 
         Args:
             bot (commands.Bot): Parent class

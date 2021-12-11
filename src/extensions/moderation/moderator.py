@@ -1,3 +1,4 @@
+import asyncio
 import random
 
 import nextcord
@@ -69,18 +70,18 @@ class Moderator(commands.Cog):
             reason (str, optional): Ban reason. Defaults to None.
 
         Returns:
-            [type]: [description]
+            int: exit code
         """
-        if len(args) == 0:
+        if not args:  # Check if no users were mentionned.
             await ctx.channel.send("You need to specify someone to kick!")
             return
-            
-        for item in args:
+
+        for item in args:  # Kick users
             try:
                 await item.kick(reason=f"You were kicked from **{ctx.guild}**")
             except nextcord.Forbidden:
                 await ctx.channel.send(f"Oops! I couldn't kick **{item}** from **{ctx.guild}**")
-                
+
         await ctx.channel.send(f"**{len(args)}** Users where successfully kicked from **{ctx.guild}**.")
         return 0
     
@@ -117,16 +118,16 @@ class Moderator(commands.Cog):
         Returns:
             [type]: [description]
         """
-        if len(args) == 0:
+        if not args:  # Check if no users were mentionned.
             await ctx.channel.send("You need to specify someone to kick!")
             return
-            
-        for item in args:
+
+        for item in args:  # Ban users
             try:
                 await item.kick(reason=f"You were kicked from **{ctx.guild}**")
             except nextcord.Forbidden:
                 await ctx.channel.send(f"Oops! I couldn't kick **{item}** from **{ctx.guild}**")
-                
+
         await ctx.channel.send(f"**{len(args)}** Users where successfully kicked from **{ctx.guild}**.")
         return 0
     
@@ -184,14 +185,14 @@ class Moderator(commands.Cog):
         Returns:
             Int: Exit Code
         """
-        if user is None:
+        if user is None:  # Check if no users were specified.
             await ctx.channel.send("You need to mention someone to ban!")
             return 0
         
         if reason is None:
             reason = "No reason specified"
         
-        view = ConfirmButton()
+        view = ConfirmButton()  # Initialize views (buttons)
         confirm_embed = nextcord.Embed(title=random.choice(self.warning_messages), description=f"You're about to ban {user} **Permanently** Are you sure?")
         await ctx.channel.send(embed=confirm_embed, view=view)
         
@@ -238,33 +239,53 @@ class Moderator(commands.Cog):
     @commands.command(name="massban")
     @commands.has_permissions(ban_members=True)
     async def massban(self, ctx: commands.Context, *args: nextcord.Member):
-        if len(args) == 0:
+        """Ban multiple users at the same time
+
+        Args:
+            ctx (commands.Context): Command context
+
+        Returns:
+            Int: Exit code
+        """
+        if len(args) == 0:  # Check if no users were specified
             await ctx.channel.send("You need to mention people to ban!")
             return 0
         confirm_embed = nextcord.Embed(title=random.choice(self.warning_messages), description=f"You're about to **permanently ban {len(args)}** users, are you sure? (Y/n)")
         await ctx.channel.send(embed=confirm_embed)
         
-        def check(m):
+        def check(m):  # Function to check if the message was the message expected
             return m.author == ctx.author and m.channel == ctx.channel
         
-        try:
+        try:  # Wait for confirmation message
             confirm_msg = await self.bot.wait_for("message", check=check, timeout=30)
-        except asyncio.TimeoutError:
+        except asyncio.TimeoutError:  # Handle timeout
             termination_embed = nextcord.Embed(title="You took too long to respond!", description="Operation Cancelled")
             await ctx.channel.send(embed=termination_embed)
             return 0
         
         if confirm_msg.content.lower() == "y" or confirm_msg.content.lower() == "yes":
             try:
-                for item in args:
+                for item in args:  # Ban users
                     item.ban()
             except nextcord.Forbidden:
                 await ctx.channel.send(f"Oops! I couldn't ban **{item}**!")
+        else:
+            await ctx.channel.send(f"Alright! Operation Cancelled.")
+            return
         
 
     
     @ban.error
     async def ban_error(self, ctx: commands.Context, error):
+        """Handle errors related to the ban command.
+
+        Args:
+            ctx (commands.Context): Command Context
+            error (Exception): error
+
+        Returns:
+            Int: Exit code
+        """
         if isinstance(error, MissingPermissions):
             embed = nextcord.Embed(title="Hold up!", description="You don't have the permissions to do that!")
             await ctx.channel.send(embed=embed)
@@ -275,6 +296,15 @@ class Moderator(commands.Cog):
     @commands.command(name="purge", aliases=["delete", "clear"])
     @commands.has_permissions(manage_messages=True)
     async def purge(self, ctx: commands.Context, num: int = None):  
+        """Bulk delete messages
+
+        Args:
+            ctx (commands.Context): Command context
+            num (int, optional): Number of messages to delete. Defaults to None.
+
+        Returns:
+            Int: Exit code
+        """
         if num is None:
             await ctx.channel.send("You need to specify a number of messages to delete!")
             return 0
@@ -290,6 +320,12 @@ class Moderator(commands.Cog):
         
     @purge.error
     async def purge_error(self, ctx: commands.Context, error):
+        """Handle errors related to the purge error
+
+        Args:
+            ctx (commands.Context): Command Context
+            error (Exception): Error
+        """
         if isinstance(error, MissingPermissions):
             embed = nextcord.Embed(title="Hold Up!", description="You don't have enough permissions to delete messages!")
             await ctx.channel.send(embed=embed)
