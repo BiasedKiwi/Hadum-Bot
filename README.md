@@ -133,4 +133,4 @@ See [CHANGELOG.md](https://github.com/shadawcraw/Hadum/blob/master/CHANGELOG.md)
 
 ## License
 
-Hadum is licensed under the GPL v3.0 License. See LICENSE for details.
+Hadum is licensed under the GPL v3.0 License. See [LICENSE](https://github.com/HadumDev/Hadum-Bot/blob/master/LICENSE) for details.
