@@ -42,7 +42,7 @@ args = parser.parse_args()
 console = Console()
 
 
-def main():
+def main() -> None:
     @client.event
     async def on_ready():
         console.log(on_ready_mes)

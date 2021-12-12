@@ -1,6 +1,7 @@
 import difflib
+from typing import List
 
-def get_similar(arr: list, *, input_: str):
+def get_similar(arr: list, *, input_: str) -> List:
     """Compares input with a list to find a closest match given a string
 
     Args:
@@ -16,7 +17,7 @@ def get_similar(arr: list, *, input_: str):
         return None
         
 
-def main():
+def main() -> None:
     print("###")
     
 
