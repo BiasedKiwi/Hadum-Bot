@@ -1,4 +1,4 @@
-![Hadum](https://github.com/shadawcraw/Hadum/blob/master/assets/logo.png)
+![Hadum](https://github.com/shadawcraw/Hadum/blob/master/assets/logo.png) 
 
 <h1 align="center">Hadum</h1>
 
@@ -11,6 +11,10 @@
 <img src="https://github.com/HadumDev/Hadum-Bot/actions/workflows/run_tests.yml/badge.svg">
 <img src="https://github.com/HadumDev/Hadum-Bot/actions/workflows/codeql-analysis.yml/badge.svg">
 </h1>
+
+## 🏗 Note
+
+This bot is still in heavy development and has no "actual" release yet, be sure to come back once in a while!
 
 ## 🏗 Note
 
