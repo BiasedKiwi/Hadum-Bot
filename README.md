@@ -82,7 +82,7 @@ So, you edited the code to your own liking and now you want to host it on your o
 <details>
    <summary>Manual Install.</summary>
 
-   1. For a manual install, follow these instructions (**NOTE: All the commands that will be mentionned are for Linux only.**):
+   1. For a manual install, follow these instructions (**NOTE: All the commands that will be mentioned are for Linux only.**):
       
       1. Clone the repository using the following commands:
       ```shell
