@@ -1,10 +1,20 @@
 ![Hadum](https://github.com/shadawcraw/Hadum/blob/master/assets/logo.png) 
 
-# Hadum
+<h1 align="center">Hadum</h1>
 
-[![CodeFactor](https://www.codefactor.io/repository/github/hadumdev/hadum-bot/badge)](https://www.codefactor.io/repository/github/shadawcraw/hadum-bot) ![python](https://img.shields.io/static/v1?label=python&message=^3.8&color=blue) ![license](https://img.shields.io/static/v1?label=license&message=GPL-3.0&color=success) ![build](https://github.com/HadumDev/Hadum-Bot/actions/workflows/run_tests.yml/badge.svg) ![CodeQL Analysis](https://github.com/HadumDev/Hadum-Bot/actions/workflows/codeql-analysis.yml/badge.svg)
+<h4 align="center">👋 Hi! I'm Hadum, a multipurpose Discord bot, written in Python.</h4>
 
-👋 Hi! I'm Hadum, a multipurpose Discord bot, written in Python.
+<h1 align="center">
+<img src="https://www.codefactor.io/repository/github/hadumdev/hadum-bot/badge">
+<img src="https://img.shields.io/static/v1?label=python&message=^3.8&color=blue">
+<img src="https://img.shields.io/static/v1?label=license&message=GPL-3.0&color=success">
+<img src="https://github.com/HadumDev/Hadum-Bot/actions/workflows/run_tests.yml/badge.svg">
+<img src="https://github.com/HadumDev/Hadum-Bot/actions/workflows/codeql-analysis.yml/badge.svg">
+</h1>
+
+## 🏗 Note
+
+This bot is still in heavy development and has no "actual" release yet, be sure to come back once in a while!
 
 ## 🏗 Note
 
@@ -31,6 +41,7 @@ Hadum Features a wide(-ish) set of commands to choose from.
 | purge    | `h.purge [number_of_messages]` |       Delete messages in the current channel |
 | meme     |            `h.meme`            |           Get a random meme from r/dankmemes |
 | reddit   | `h.reddit [name_of_subreddit]` | Get a random post from the subreddit entered |
+| autopostmeme | `h.reddit [n_of_memes]`    | Get memes witthout even asking for them!     |
 
 ## 👩‍💻 Command Line Args
 
@@ -50,7 +61,7 @@ python main.py /[ARG_FLAG]  # Windows
 python3 main.py -[ARG_FLAG] # Linux/Unix-like/Windows WSL
 ```
 
-## 🖥 Hosting on your own machine
+## 🖥 Self-hosting
 
 So, you edited the code to your own liking and now you want to host it on your own machine? No problem! There are 2 ways of installing the bot:
 
@@ -75,7 +86,7 @@ So, you edited the code to your own liking and now you want to host it on your o
 <details>
    <summary>Manual Install.</summary>
 
-   1. For a manual install, follow these instructions (**NOTE: All the commands that will be mentionned are for Linux only.**):
+   1. For a manual install, follow these instructions (**NOTE: All the commands that will be mentioned are for Linux only.**):
       
       1. Clone the repository using the following commands:
       ```shell
@@ -96,7 +107,7 @@ So, you edited the code to your own liking and now you want to host it on your o
       ```
       Find out your Reddit Application ID & Secret [with this guide!](https://www.geeksforgeeks.org/how-to-get-client_id-and-client_secret-for-python-reddit-api-registration/)
 
-      4. Install the dependencies using pip (Python ^3.8 required)
+      4. Install the dependencies using pip (Python 3.8 or higher required)
       ```shell
       $ pip3 install --no-cache-dir -r requirements.txt
       ```
@@ -127,4 +138,4 @@ See [CHANGELOG.md](https://github.com/shadawcraw/Hadum/blob/master/CHANGELOG.md)
 
 ## License
 
-Hadum is licensed under the GPL v3.0 License. See LICENSE for details.
+Hadum is licensed under the GPL v3.0 License. See [LICENSE](https://github.com/HadumDev/Hadum-Bot/blob/master/LICENSE) for details.

@@ -4,11 +4,12 @@ from dotenv import load_dotenv
 from nextcord.ext import commands
 from rich.console import Console
 from utils.exceptions import StartupError
+from nextcord.ext.commands import AutoShardedBot
 
 console = Console()
 
 
-def initial_load(*, debug: bool = False):
+def initial_load(*, debug: bool = False) -> int:
     """
     Starts the animation bar and loads the big 'Hadum' ASCII Art text.
     """
@@ -33,7 +34,7 @@ def initial_load(*, debug: bool = False):
     return 0
             
             
-def load_cogs(client_var, *, file_extension: str = ".py", cog_path: str = "extensions", include_folders: bool = False, debug: bool = False):
+def load_cogs(client_var: AutoShardedBot, *, file_extension: str = ".py", cog_path: str = "extensions", include_folders: bool = False, debug: bool = False) -> int:
     """Loads all the cogs in the specified directory.
 
     Args:
@@ -46,7 +47,7 @@ def load_cogs(client_var, *, file_extension: str = ".py", cog_path: str = "exten
     try:
         for filename in os.listdir("./" + cog_path + "/"):  # I know this is really messy but I'll try to clean it up later
             if filename.endswith(file_extension):
-                if debug and filename == "reddit.py":
+                if debug and filename == "reddit.py":  # TODO: Fix this
                     break
                 else:
                     client_var.load_extension(f"{cog_path}.{filename[:-len(file_extension)]}")  # this loop is stolen from youtube
@@ -67,7 +68,7 @@ def load_cogs(client_var, *, file_extension: str = ".py", cog_path: str = "exten
     return 0
             
 
-def get_token(file = ".env", *, ask_for_token: bool = False):
+def get_token(file: str = ".env", *, ask_for_token: bool = False) -> str:
     """Gets the token from an environment variable
 
     Args:
@@ -104,7 +105,7 @@ def get_token(file = ".env", *, ask_for_token: bool = False):
     return TOKEN_VAR
             
 
-def main():
+def main() -> None:
     console.print("###")
 
 

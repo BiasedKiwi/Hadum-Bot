@@ -42,7 +42,7 @@ args = parser.parse_args()
 console = Console()
 
 
-def main():
+def main() -> None:
     @client.event
     async def on_ready():
         console.log(on_ready_mes)
@@ -95,7 +95,7 @@ def main():
     
 
 if __name__ == "__main__":
-    if args.version:
+    if args.version:  # Check for flags
         to_print = ["nextcord", "rich", "psutil"]
         console.print("bot: " + config.get("config", "bot_version"))
         for i in to_print:
