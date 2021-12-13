@@ -83,7 +83,7 @@ class Help(commands.Cog):
         embed = nextcord.Embed(title="Miscellaneous Commands")
         embed.add_field(name="meme", value="Get a random meme!\n Usage: `h.meme`", inline=False)
         embed.add_field(name="reddit", value="Get a random post from the subreddit entered!\n Usage: `h.reddit [SUBREDDIT]`", inline=False)
-        embed.add_field(name="autopostmeme", value="Get memes without even asking for them!\n Usage: `h.autopostmeme [N_OF_MEMES]`", inline=False)
+        embed.add_field(name="automeme", value="Get memes without even asking for them!\n Usage: `h.autopostmeme [N_OF_MEMES]`", inline=False)
         await ctx.channel.send(embed=embed)
         
         return 0
