@@ -1,7 +1,6 @@
-- name: Release on Push
-  uses: rymndhng/release-on-push-action@v0.23.1
+name: Release on Push
   
-  on: 
+on:
   push:
     branches:
       - master
