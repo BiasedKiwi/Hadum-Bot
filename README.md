@@ -57,7 +57,7 @@ python main.py /[ARG_FLAG]  # Windows
 python3 main.py -[ARG_FLAG] # Linux/Unix-like/Windows WSL
 ```
 
-## 🖥 Hosting on your own machine
+## 🖥 Self-hosting
 
 So, you edited the code to your own liking and now you want to host it on your own machine? No problem! There are 2 ways of installing the bot:
 
@@ -103,7 +103,7 @@ So, you edited the code to your own liking and now you want to host it on your o
       ```
       Find out your Reddit Application ID & Secret [with this guide!](https://www.geeksforgeeks.org/how-to-get-client_id-and-client_secret-for-python-reddit-api-registration/)
 
-      4. Install the dependencies using pip (Python ^3.8 required)
+      4. Install the dependencies using pip (Python 3.8 or higher required)
       ```shell
       $ pip3 install --no-cache-dir -r requirements.txt
       ```
