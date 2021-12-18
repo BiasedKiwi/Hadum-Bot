@@ -34,13 +34,13 @@ def initial_load(*, debug: bool = False) -> int:
     return 0
             
             
-def load_cogs(client_var: AutoShardedBot, *, file_extension: str = ".py", cog_path: str = "extensions", include_folders: bool = False, debug: bool = False) -> int:
+def load_cogs(client_var: AutoShardedBot, *, file_extension: str = ".py", cog_path: str = "extensions", recursive: bool = False, debug: bool = False) -> int:
     """Loads all the cogs in the specified directory.
 
     Args:
         file_extension (str, optional): Extensions of the files to be loaded. Defaults to ".py".
         cog_path (str, optional): Directory in which the cogs are located. Defaults to "extensions".
-        include_folders(bool, optional): Whether to search through folders when looking for cogs. Defaults to False.
+        recursive(bool, optional): Whether to search through folders when looking for cogs. Defaults to False.
     """
     console.log("Starting to load extensions...")
     
@@ -51,7 +51,7 @@ def load_cogs(client_var: AutoShardedBot, *, file_extension: str = ".py", cog_pa
                     break
                 else:
                     client_var.load_extension(f"{cog_path}.{filename[:-len(file_extension)]}")  # this loop is stolen from youtube
-            elif include_folders and os.path.isdir("./" + cog_path + "/" + filename):
+            elif recursive and os.path.isdir("./" + cog_path + "/" + filename):
                 cwd = os.getcwd()
                 f = filename
                 os.chdir("./" + cog_path + "/" + filename)
