@@ -86,7 +86,7 @@ def main() -> None:
     t1 = threading.Thread(target=utils.initial_load(debug=args.quiet))
     t1.start()
     if load_exts:
-        utils.load_cogs(client, file_extension=".py", cog_path="extensions", include_folders=True, debug=args.do_not_load)
+        utils.load_cogs(client, file_extension=".py", cog_path="extensions", recursive=True, debug=args.do_not_load)
 
     try:
         client.run(utils.get_token("../../.env", ask_for_token=True))
