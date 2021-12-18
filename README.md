@@ -45,7 +45,7 @@ Hadum Features a wide(-ish) set of commands to choose from.
 
 ## 👩‍💻 Command Line Args
 
-Hadum Features a few CLI args to choose from (more coming soon)
+Hadum Features a few CLI args to choose from.
 
 | Name/Flag |                        Description |
 | :-------- | ---------------------------------: |
@@ -53,6 +53,7 @@ Hadum Features a few CLI args to choose from (more coming soon)
 | `-v`      |         Show error logs in console |
 | `-h`      |                           Get help |
 | `-V`      | Show useful info about the bot version  |
+| `-d`      | Do not load extensions             |
 
 To use them, enter
 
