@@ -1,6 +1,10 @@
 name: Greetings
 
-on: [pull_request, issues]
+on:
+  issues:
+  push:
+    branches:
+      - master
 
 jobs:
   greeting:
@@ -13,4 +17,4 @@ jobs:
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         issue-message: 'Hi! We are so happy to see you here! Make sure to follow the Issue Template!'
-        pr-message: 'Hi! We are so happy to see you here! Make you sure you read the Contribution Guidelines!'
+        pr-message: 'Hi! We are so happy to see you here! First, choose a label for your PR according to your changes (minor, major, patch).'
