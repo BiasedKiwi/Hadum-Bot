@@ -10,6 +10,7 @@
 <img src="https://img.shields.io/static/v1?label=license&message=GPL-3.0&color=success">
 <img src="https://github.com/HadumDev/Hadum-Bot/actions/workflows/run_tests.yml/badge.svg">
 <img src="https://github.com/HadumDev/Hadum-Bot/actions/workflows/codeql-analysis.yml/badge.svg">
+   <a href="https://discord.com/api/oauth2/authorize?client_id=776117946183188480&permissions=8&scope=bot"><img src="https://img.shields.io/badge/Discord-Invite-blue"></a>
 </h1>
 
 ## 🏗 Note
