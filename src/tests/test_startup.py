@@ -9,7 +9,7 @@ client = commands.Bot(command_prefix="", help_command=None)
 
 class TestStartup(unittest.TestCase):
     def test_load_cogs_recursively(self):
-        self.assertEqual(startup.load_cogs(client, include_folders=True, debug=True), 0)
+        self.assertEqual(startup.load_cogs(client, recursive=True, debug=True), 0)
         
     def test_initial_load_with_debug_off(self):
         self.assertEqual(startup.initial_load(debug=False), 0)
@@ -25,7 +25,7 @@ class TestStartup(unittest.TestCase):
                 outfile.write("TOKEN=12345")
         except FileExistsError:
             pass
-        self.assertNotEqual(startup.get_token(file="./.env",ask_for_token=False), -1)
+        self.assertNotEqual(startup.get_token(file="./.env", ask_for_token=False), -1)
         if os.path.exists("./.env"):
             os.remove("./.env")
 
