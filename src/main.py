@@ -37,6 +37,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-q", "--quiet", dest="quiet", action="store_true", help="suppress output")
 parser.add_argument("-v", "--verbose", dest="verbose", action="store_true", help="Show maximum output")
 parser.add_argument("-V", "--version", dest="version", action="store_true", help="Output version info")
+parser.add_argument("-d", "--do-not-load", dest="do_not_load", action="store_true", help="Do not load extensions")
 args = parser.parse_args()
 
 console = Console()
@@ -85,7 +86,7 @@ def main() -> None:
     t1 = threading.Thread(target=utils.initial_load(debug=args.quiet))
     t1.start()
     if load_exts:
-        utils.load_cogs(client, file_extension=".py", cog_path="extensions", include_folders=True)
+        utils.load_cogs(client, file_extension=".py", cog_path="extensions", include_folders=True, debug=args.do_not_load)
 
     try:
         client.run(utils.get_token("../../.env", ask_for_token=True))
