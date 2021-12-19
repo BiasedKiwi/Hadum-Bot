@@ -16,7 +16,7 @@ config.read("config.ini")
 console = Console()
 
 
-def initial_load(*, debug: bool = False) -> int:
+def initial_load(*, debug: bool = False, test_mode: bool = False) -> int:
     """
     Starts the animation bar and loads the big 'Hadum' ASCII Art text.
     """
@@ -35,8 +35,9 @@ def initial_load(*, debug: bool = False) -> int:
         console.print(f"[green]{item}", justify="center")
         time.sleep(0.08)
         
-    with console.status("Checking for updates..."):
-        check_for_updates()
+    if not test_mode:
+        with console.status("Checking for updates..."):
+            check_for_updates()
         
     with console.status("Loading Extensions..."):
         time.sleep(5)
