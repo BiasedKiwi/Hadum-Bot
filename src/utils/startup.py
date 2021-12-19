@@ -116,6 +116,8 @@ def get_token(file: str = ".env", *, ask_for_token: bool = False) -> str:
 
 
 def check_for_updates():
+    if not config.getboolean("auto_update", "auto_update"):
+        return
     response = requests.get(f"https://api.github.com/repos/{config.get('auto_update', 'owner')}/{config.get('auto_update', 'target_repo')}/releases/latest")
     latest_ver = response.json()["tag_name"]
     chopped_latest = int(response.json()["tag_name"].replace("v", "").replace(".", ""))
