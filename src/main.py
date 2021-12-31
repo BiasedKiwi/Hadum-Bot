@@ -6,6 +6,7 @@ from datetime import datetime
 from importlib.metadata import version
 from sys import version as py_ver
 
+import nextcord
 from nextcord.ext import commands
 from nextcord.ext.commands.errors import CommandNotFound
 from rich.console import Console
@@ -49,6 +50,7 @@ def main() -> None:
         console.log(on_ready_mes)
         if args.verbose:
             console.print("""[bright_black]\nERRORS WILL BE LOGGED HERE\n""", justify="center")
+        await client.change_presence(status=nextcord.Status.online, activity=nextcord.Game(name="h.help"))
         
         
     @client.event

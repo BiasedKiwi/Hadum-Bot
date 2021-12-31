@@ -1,6 +1,3 @@
-# Do not include local environment variables
-.env
-
 # Do not include the .git folder
 .git
 

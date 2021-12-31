@@ -12,7 +12,7 @@ class TestStartup(unittest.TestCase):
         self.assertEqual(startup.load_cogs(client, recursive=True, debug=True), 0)
         
     def test_initial_load_with_debug_off(self):
-        self.assertEqual(startup.initial_load(debug=False), 0)
+        self.assertEqual(startup.initial_load(debug=False, test_mode=True), 0)
         
     def test_initial_load_with_debug_on(self):
         self.assertEqual(startup.initial_load(debug=True), 0)

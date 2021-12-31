@@ -1,15 +1,22 @@
+import configparser
 import os
 import time
+
+import requests
 from dotenv import load_dotenv
 from nextcord.ext import commands
-from rich.console import Console
-from utils.exceptions import StartupError
 from nextcord.ext.commands import AutoShardedBot
+from rich.console import Console
 
+from utils.exceptions import StartupError
+
+
+config = configparser.ConfigParser()
+config.read("config.ini")
 console = Console()
 
 
-def initial_load(*, debug: bool = False) -> int:
+def initial_load(*, debug: bool = False, test_mode: bool = False) -> int:
     """
     Starts the animation bar and loads the big 'Hadum' ASCII Art text.
     """
@@ -28,7 +35,11 @@ def initial_load(*, debug: bool = False) -> int:
         console.print(f"[green]{item}", justify="center")
         time.sleep(0.08)
         
-    with console.status("Booting up..."):
+    if not test_mode:
+        with console.status("Checking for updates..."):
+            check_for_updates()
+        
+    with console.status("Loading Extensions..."):
         time.sleep(5)
         
     return 0
@@ -103,6 +114,24 @@ def get_token(file: str = ".env", *, ask_for_token: bool = False) -> str:
             raise IOError(e)
         
     return TOKEN_VAR
+
+
+def check_for_updates():
+    if not config.getboolean("auto_update", "auto_update"):
+        return
+    response = requests.get(f"https://api.github.com/repos/{config.get('auto_update', 'owner')}/{config.get('auto_update', 'target_repo')}/releases/latest")
+    latest_ver = response.json()["tag_name"]
+    chopped_latest = int(response.json()["tag_name"].replace("v", "").replace(".", ""))
+    current_ver = config.get("config", "bot_version")
+    chopped_current = int(config.get("config", "bot_version").replace("v", "").replace(".", ""))
+    
+    if latest_ver > current_ver:
+        console.log(f"You are running an outdated bot version ({current_ver}). The latest version is {latest_ver}.")
+        console.log(f"You can download it at {response.json()['url']}")
+    elif latest_ver < current_ver:
+        console.log("You are running a newer bot version than the latest stable release!")
+    else:
+        console.log("You are running the latest version of the bot!")
             
 
 def main() -> None:
