@@ -8,7 +8,7 @@ console = Console()
 
 
 class Administrator(commands.Cog):
-    def __init__(self, bot:commands.Bot):
+    def __init__(self, bot: commands.Bot):
         """A collection of Administrator commands (temporary)
 
         Args:
@@ -19,5 +19,5 @@ class Administrator(commands.Cog):
         console.log(__name__.strip("extensions.") + " Cog Online")
 
 
-def setup(bot:commands.Bot):
+def setup(bot: commands.Bot):
     bot.add_cog(Administrator(bot))

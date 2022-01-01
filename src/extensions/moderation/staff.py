@@ -7,10 +7,10 @@ console = Console()
 
 
 class Staff(commands.Cog):
-    def __init__(self, bot:commands.Bot):
+    def __init__(self, bot: commands.Bot):
         self.bot = bot
-        console.log(__name__.strip('extensions.') + " Cog online")
-        
+        console.log(__name__.strip("extensions.") + " Cog online")
+
     @commands.group(name="staff")
     async def staff(self, ctx: commands.Context):
         """Placeholder for staff command
@@ -22,9 +22,7 @@ class Staff(commands.Cog):
             NotImplementedError: Error Raised
         """
         raise NotImplementedError
-        
 
 
-
-def setup(bot:commands.Bot):
+def setup(bot: commands.Bot):
     bot.add_cog(Staff(bot))
