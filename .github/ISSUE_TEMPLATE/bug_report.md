@@ -24,6 +24,7 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Desktop & Smartphone (please complete the following information)**
+- OS (If the bot is self-hosted) [e.g. Ubuntu-20.04]
 - Bot Version [e.g 0.4.0]
 - Date [e.g 23/4/19]
 
