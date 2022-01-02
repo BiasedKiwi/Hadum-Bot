@@ -4,6 +4,8 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+nextcord = "==2.0.0a1"
+rich = "==10.12.0"
 aiofiles = "==0.6.0"
 aiohttp = "==3.7.4.post0"
 aiosqlite = "==0.17.0"
@@ -20,16 +22,15 @@ colorama = "==0.4.4"
 commonmark = "==0.9.1"
 idna = "==3.3"
 multidict = "==5.2.0"
-nextcord = "==2.0.0a1"
 psutil = "==5.8.0"
 Pygments = "==2.10.0"
 python-dotenv = "==0.19.1"
 requests = "==2.26.0"
-rich = "==10.12.0"
 typing-extensions = "==3.10.0.2"
 update-checker = "==0.18.0"
 urllib3 = "==1.26.7"
 yarl = "==1.7.0"
+black = "*"
 
 [dev-packages]
 
