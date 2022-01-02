@@ -75,6 +75,7 @@ def main() -> None:
         await client.change_presence(
             status=nextcord.Status.online, activity=nextcord.Game(name="h.help")
         )
+        print("This is a long line that black shoulod automatically format... I'm trying to make this as long as possible........... How's your day? OK I think it's enough now")
 
     @client.event
     async def on_connect():
