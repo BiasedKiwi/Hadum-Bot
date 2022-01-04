@@ -25,18 +25,14 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      - name: Setup Python
-        uses: actions/setup-python@v2.3.0
+      - name: Install pipenv
+        run: pipx install pipenv
+      - uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python_version }}
-
-      # Runs a single command using the runners shell
-      - name: Install Dependencies
-        run: pip3 install -r requirements.txt --no-cache-dir
-
+          cache: 'pipenv'
+      - run: pipenv install
       # Runs a set of commands using the runners shell
       - name: Test
         run: |
