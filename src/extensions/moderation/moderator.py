@@ -258,7 +258,7 @@ class Moderator(commands.Cog):
     async def massban(self, ctx: commands.Context, *args: nextcord.Member):
         view = ConfirmButton()
 
-        if len(args) == 0:
+        if not args:
             await ctx.channel.send("You need to mention people to ban!")
             return 0
         confirm_embed = nextcord.Embed(
