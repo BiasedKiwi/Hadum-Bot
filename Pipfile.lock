@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "0806e97b52a4a08baa037be14d172c0e9becdad447185b3fbca0167c31c514f9"
+            "sha256": "fe1aa0317ed390f646d58287de62ca868759c9735129309d5de8863fdd8ccf41"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -274,10 +274,10 @@
         },
         "nextcord": {
             "hashes": [
-                "sha256:9e62ecccfa6d705b172461b88cb0ae27f1c049a131b0a6a6f3b504673723fe05"
+                "sha256:3fe910deeba297acab7955c7b571b6ac3f495ee26c5f66148d1e62aaec9cb22e"
             ],
             "index": "pypi",
-            "version": "==2.0.0a1"
+            "version": "==2.0.0a5"
         },
         "pathspec": {
             "hashes": [
