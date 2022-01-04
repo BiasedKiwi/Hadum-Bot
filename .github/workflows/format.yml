@@ -21,4 +21,3 @@ jobs:
           auto_fix: true
           commit_message: '[norelease] Format with Black'
           git_name: 'HadumFormatter'
-          
