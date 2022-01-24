@@ -1,0 +1,18 @@
+name: Update Checkums
+
+on:
+  - push
+  - workflow_dispatch
+  
+jobs:
+  Update_Checksums:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Write sums to file
+        run: |
+          find . -exec sha256sum {} \; > ./scripts/checksums.txt
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: [norelease] Update checksums
+          
+    
