@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v2
       - name: write checksums
         run: |
-          find . -type f -exec sha256sum {} \; > ./scripts/checksums.txts
+          find . -type f -not -path "./.git/*" -exec sha256sum {} \; > ./scripts/checksums.txts
       - uses: stefanzweifel/git-auto-commit-action@v4
         with: 
           commit_message: \[norelease] Update checksums
