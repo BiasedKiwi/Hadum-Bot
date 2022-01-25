@@ -8,6 +8,8 @@ jobs:
   write_sums:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout master
+        uses: actions/checkout@v2
       - name: write checksums
         run: |
           find . -type f -exec sha256sum {} \; > ./scripts/checksums.txts
