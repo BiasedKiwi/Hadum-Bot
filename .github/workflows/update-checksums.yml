@@ -1,8 +1,9 @@
 name: Update Checksums
 
 on:
-  - push
-  - workflow_dispatch
+  push:
+      branches: [ master ]
+  workflow_dispatch:
   
 jobs:
   write_sums:
