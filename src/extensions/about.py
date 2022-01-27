@@ -1,5 +1,6 @@
 import configparser
 import datetime
+import time
 
 import nextcord
 from nextcord.ext import commands
@@ -16,7 +17,7 @@ class About(commands.Cog):
     def __init__(self, bot: commands.Bot):
         """The About Command."""
         self.bot = bot
-        self.get_uptime.start()
+        self.start_time = time.time()
 
     @commands.Cog.listener()
     async def on_ready(self):
@@ -33,14 +34,9 @@ class About(commands.Cog):
         embed.add_field(name="Version", value=config.get("config", "bot_version"))
         embed.add_field(
             name="Uptime",
-            value=f"The bot has been up for: {datetime.timedelta(seconds=uptime)}",
+            value=f"The bot has been up for: {datetime.timedelta(seconds=self.start_time - time.time())}",
         )
         await ctx.channel.send(embed=embed)
-
-    @loop(seconds=1)
-    async def get_uptime(self):
-        global uptime
-        uptime += 1
 
 
 def setup(bot: commands.Bot):
