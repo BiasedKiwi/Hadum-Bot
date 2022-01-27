@@ -4,7 +4,6 @@ import time
 
 import requests
 from dotenv import load_dotenv
-from nextcord.ext import commands
 from nextcord.ext.commands import AutoShardedBot
 from rich.console import Console
 
@@ -79,12 +78,12 @@ def load_cogs(
                 cwd = os.getcwd()
                 f = filename
                 os.chdir("./" + cog_path + "/" + filename)
-                for filename in os.listdir(os.getcwd()):
-                    if filename.endswith(".py"):
-                        if debug and "reddit" in filename:
+                for filename_ in os.listdir(os.getcwd()):
+                    if filename_.endswith(".py"):
+                        if debug and "reddit" in filename_:
                             break
                         client_var.load_extension(
-                            f"{cog_path}.{f}.{filename[:-len(file_extension)]}"
+                            f"{cog_path}.{f}.{filename_[:-len(file_extension)]}"
                         )  # for some reason context managers don't work on os.chdir() might fix.
                 os.chdir(cwd)
 
@@ -142,11 +141,7 @@ def check_for_updates():
         f"https://api.github.com/repos/{config.get('auto_update', 'owner')}/{config.get('auto_update', 'target_repo')}/releases/latest"
     )
     latest_ver = response.json()["tag_name"]
-    chopped_latest = int(response.json()["tag_name"].replace("v", "").replace(".", ""))
     current_ver = config.get("config", "bot_version")
-    chopped_current = int(
-        config.get("config", "bot_version").replace("v", "").replace(".", "")
-    )
 
     if latest_ver > current_ver:
         console.log(

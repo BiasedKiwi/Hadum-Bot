@@ -1,9 +1,9 @@
 import configparser
 import datetime
+import time
 
 import nextcord
 from nextcord.ext import commands
-from nextcord.ext.tasks import loop
 from rich.console import Console
 
 console = Console()
@@ -16,8 +16,11 @@ class About(commands.Cog):
     def __init__(self, bot: commands.Bot):
         """The About Command."""
         self.bot = bot
-        console.log(__name__.strip("extensions.") + " Cog Online")
-        self.get_uptime.start()
+        self.start_time = time.time()
+
+    @commands.Cog.listener()
+    async def on_ready(self):
+        console.log(__name__.replace("extensions.", "") + "Cog Online")
 
     @commands.command(name="about")
     async def about(self, ctx: commands.Context):
@@ -30,14 +33,9 @@ class About(commands.Cog):
         embed.add_field(name="Version", value=config.get("config", "bot_version"))
         embed.add_field(
             name="Uptime",
-            value=f"The bot has been up for: {datetime.timedelta(seconds=uptime)}",
+            value=f"The bot has been up for: {datetime.timedelta(seconds=self.start_time - time.time())}",
         )
         await ctx.channel.send(embed=embed)
-
-    @loop(seconds=1)
-    async def get_uptime(self):
-        global uptime
-        uptime += 1
 
 
 def setup(bot: commands.Bot):

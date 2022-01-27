@@ -16,8 +16,8 @@ echo "Please input your Reddit Client ID below"
 read REDDIT_ID
 
 echo "Configuring environment variables..." # Create environment variables
-echo "TOKEN="$DSC_TOKEN > .env
-echo "REDDIT_CLIENT_SECRET="$REDDIT_SECRET > .env
-echo "REDDIT_CLIENT_ID="$REDDIT_ID > .env
+echo "TOKEN=""$DSC_TOKEN" > .env
+echo "REDDIT_CLIENT_SECRET=""$REDDIT_SECRET" > .env
+echo "REDDIT_CLIENT_ID=""$REDDIT_ID" > .env
 
 echo "Done!"

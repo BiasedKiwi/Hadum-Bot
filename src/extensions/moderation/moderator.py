@@ -3,7 +3,6 @@ import random
 
 import nextcord
 from nextcord.ext import commands
-from nextcord.ext.commands import errors
 from nextcord.ext.commands.errors import BadArgument, MissingPermissions
 from rich.console import Console
 
@@ -36,7 +35,10 @@ class Moderator(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
         self.warning_messages = ["Hold up!", "Wait!", "Are you sure about this?"]
-        console.log(__name__.strip("extensions.") + " Cog Online")
+
+    @commands.Cog.listener()
+    async def on_ready(self):
+        console.log(__name__.replace("extensions.", "") + "Cog Online")
 
     @commands.command(name="kick", aliases=["yank"])
     @commands.has_permissions(kick_members=True)
@@ -315,14 +317,14 @@ class Moderator(commands.Cog):
             await ctx.channel.send(embed=termination_embed)
             return 0
 
-        if confirm_msg.content.lower() == "y" or confirm_msg.content.lower() == "yes":
+        if confirm_msg.content.lower() in ("y", "yes"):
             try:
                 for item in args:  # Ban users
                     item.ban()
             except nextcord.Forbidden:
                 await ctx.channel.send(f"Oops! I couldn't ban **{item}**!")
         else:
-            await ctx.channel.send(f"Alright! Operation Cancelled.")
+            await ctx.channel.send("Alright! Operation Cancelled.")
             return
 
     @ban.error

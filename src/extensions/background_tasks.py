@@ -19,10 +19,13 @@ class BackgroundTasks(commands.Cog):
             bot (commands.Bot): Bot instance
         """
         self.bot = bot
-        console.log(__name__.strip("extensions.") + " Cog Online")
 
         if on:
             self.get_info.start()
+
+    @commands.Cog.listener()
+    async def on_ready(self):
+        console.log(__name__.replace("extensions.", "") + "Cog Online")
 
     @loop(seconds=15)
     async def get_info(self):
