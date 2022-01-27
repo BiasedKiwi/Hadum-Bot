@@ -35,7 +35,10 @@ class Moderator(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
         self.warning_messages = ["Hold up!", "Wait!", "Are you sure about this?"]
-        console.log(__name__.strip("extensions.") + " Cog Online")
+
+    @commands.Cog.listener()
+    async def on_ready(self):
+        console.log(__name__.replace("extensions.", "") + "Cog Online")
 
     @commands.command(name="kick", aliases=["yank"])
     @commands.has_permissions(kick_members=True)

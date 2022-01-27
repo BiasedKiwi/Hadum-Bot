@@ -13,7 +13,10 @@ class Administrator(commands.Cog):
         """
         self.bot = bot
         self.warning_messages = ["Hold up!", "Wait!", "Are you sure about this?"]
-        console.log(__name__.strip("extensions.") + " Cog Online")
+
+        @commands.Cog.listener()
+        async def on_ready(self):
+            console.log(__name__.replace("extensions.", "") + "Cog Online")
 
 
 def setup(bot: commands.Bot):

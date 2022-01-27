@@ -36,6 +36,10 @@ class Help(commands.Cog):
 
             return 0
 
+    @commands.Cog.listener()
+    async def on_ready(self):
+        console.log(__name__.replace("extensions.", "") + "Cog Online")
+
     @help_.command(name="moderation")
     async def moderation(self, ctx: commands.Context):
         """Moderation section of the help commands

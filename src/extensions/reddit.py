@@ -32,7 +32,10 @@ class Reddit(commands.Cog):
             user_agent=f"dankmemes scraper v0.4 by u/{os.getenv('REDDIT_USER_AGENT')}",
         )
         self.get_memes.start()
-        console.log(__name__.strip("extensions.") + " Cog Online")
+
+    @commands.Cog.listener()
+    async def on_ready(self):
+        console.log(__name__.replace("extensions.", "") + "Cog Online")
 
     @loop(seconds=1800)
     async def get_memes(self):

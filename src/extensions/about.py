@@ -16,8 +16,11 @@ class About(commands.Cog):
     def __init__(self, bot: commands.Bot):
         """The About Command."""
         self.bot = bot
-        console.log(__name__.strip("extensions.") + " Cog Online")
         self.get_uptime.start()
+
+    @commands.Cog.listener()
+    async def on_ready(self):
+        console.log(__name__.replace("extensions.", "") + "Cog Online")
 
     @commands.command(name="about")
     async def about(self, ctx: commands.Context):
