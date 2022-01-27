@@ -8,7 +8,7 @@ bc395e61033f8e47ba10521f0e7c9eaaaae8627dd68c621559f3fb5a460d8004  ./src/extensio
 c821a4d7753a6b0d40a97993194f1a0251201d3b70a4c3ad16a81204c92a468a  ./src/extensions/help.py
 391772313328180ce161f2705d11420b86da0556af59ccc50e38ae8c242738a6  ./src/extensions/misc.py
 1ffde6919025a922700d0611caf052adbbd91dfb22a266d90d94d05601f93380  ./src/extensions/background_tasks.py
-5fd70231022e7f059ad0d5decfee4fd9c5270c000829e6b66529eb5c335aa0f2  ./src/extensions/moderation/moderator.py
+6e5c20071937e14b85c6fff4e58647148d0b503216372f8239a3e7d9c2eb1cb8  ./src/extensions/moderation/moderator.py
 4d7528a7ff3d098545c6fc6ad77e8c4bb088606809125e52a3b2e7b4fb129cd9  ./src/extensions/moderation/admin.py
 c4965cfb0bcb4ff3bde2ce43ff3fc21c4b68c406d7a9956408219a555a391dcc  ./src/extensions/moderation/staff.py
 1fc225fd87074616f26082f7c0b23aad4f4a4555a3432ad6b7560e8f5a1b4b63  ./src/config.ini
