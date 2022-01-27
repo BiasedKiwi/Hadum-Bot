@@ -4,7 +4,6 @@ import time
 
 import requests
 from dotenv import load_dotenv
-from nextcord.ext import commands
 from nextcord.ext.commands import AutoShardedBot
 from rich.console import Console
 
