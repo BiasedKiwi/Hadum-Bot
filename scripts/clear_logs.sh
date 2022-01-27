@@ -1,4 +1,4 @@
 #! /bin/bash
 
 cd ../logs
-rm *.log
+rm ./*.log
