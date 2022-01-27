@@ -4,7 +4,6 @@ import time
 
 import nextcord
 from nextcord.ext import commands
-from nextcord.ext.tasks import loop
 from rich.console import Console
 
 console = Console()
