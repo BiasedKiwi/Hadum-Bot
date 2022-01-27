@@ -141,11 +141,7 @@ def check_for_updates():
         f"https://api.github.com/repos/{config.get('auto_update', 'owner')}/{config.get('auto_update', 'target_repo')}/releases/latest"
     )
     latest_ver = response.json()["tag_name"]
-    chopped_latest = int(response.json()["tag_name"].replace("v", "").replace(".", ""))
     current_ver = config.get("config", "bot_version")
-    chopped_current = int(
-        config.get("config", "bot_version").replace("v", "").replace(".", "")
-    )
 
     if latest_ver > current_ver:
         console.log(
