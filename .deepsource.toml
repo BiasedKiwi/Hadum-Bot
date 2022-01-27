@@ -1,0 +1,20 @@
+version = 1
+
+test_patterns = ["./src/tests/*"]
+
+exclude_patterns = ["./Pipfile.lock"]
+
+[[analyzers]]
+name = "shell"
+enabled = true
+
+[[analyzers]]
+name = "python"
+enabled = true
+
+  [analyzers.meta]
+  runtime_version = "3.x.x"
+
+[[transformers]]
+name = "black"
+enabled = true
