@@ -324,7 +324,7 @@ class Moderator(commands.Cog):
             except nextcord.Forbidden:
                 await ctx.channel.send(f"Oops! I couldn't ban **{item}**!")
         else:
-            await ctx.channel.send(f"Alright! Operation Cancelled.")
+            await ctx.channel.send("Alright! Operation Cancelled.")
             return
 
     @ban.error
