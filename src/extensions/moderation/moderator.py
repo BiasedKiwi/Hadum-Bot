@@ -3,7 +3,6 @@ import random
 
 import nextcord
 from nextcord.ext import commands
-from nextcord.ext.commands import errors
 from nextcord.ext.commands.errors import BadArgument, MissingPermissions
 from rich.console import Console
 
