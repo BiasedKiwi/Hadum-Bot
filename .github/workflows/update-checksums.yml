@@ -13,6 +13,8 @@ jobs:
       - name: write checksums
         run: |
           find . -type f -not -path "./.git/*" -not -path "./scripts/checksums.txt" -exec sha256sum {} \; > ./scripts/checksums.txts
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with: 
-          commit_message: \[norelease] Update checksums
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "[norelease] Update checksums."
+          git push
