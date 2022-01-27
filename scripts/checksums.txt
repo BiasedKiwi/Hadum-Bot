@@ -42,5 +42,5 @@ f201f08dd87c15d62ceabe28f4b53e60c2eb804d016a77c2f6f39a677ddffd30  ./.github/work
 a74e76fc3f8d61a07f58bfb62604b8f71e423766e28975c11c514dba0277bc18  ./.github/workflows/release.yml
 80055d271597631d9a8164be047086fa402ad08a5c1ad1c1fa5e6ae7ade09deb  ./.github/workflows/stale.yml
 56702fec5d5b8e87fc4c33e04f4cf7798a8ff2a65a0bd6d2c69b8751a6f7c00b  ./.github/workflows/greetings.yml
-a742a2a8379d56eebf73b2a70bfc5ae9cd6dab2ac608f87598b679327d327b74  ./.github/workflows/update-checksums.yml
+730d5e2f0f0058ebbbe1eb2eb9f243789f67de092a5c264e441bc7bde5122215  ./.github/workflows/update-checksums.yml
 2f0610bde8128f9dee817414a17052705da776d5fc8568d5e09068e56bfe1c33  ./.github/workflows/codeql-analysis.yml
