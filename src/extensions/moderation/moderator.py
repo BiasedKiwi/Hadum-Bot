@@ -315,7 +315,7 @@ class Moderator(commands.Cog):
             await ctx.channel.send(embed=termination_embed)
             return 0
 
-        if confirm_msg.content.lower() == "y" or confirm_msg.content.lower() == "yes":
+        if confirm_msg.content.lower() in ("y", "yes"):
             try:
                 for item in args:  # Ban users
                     item.ban()
