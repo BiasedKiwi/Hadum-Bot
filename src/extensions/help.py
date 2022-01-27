@@ -14,7 +14,10 @@ class Help(commands.Cog):
             bot (commands.Bot): Bot instance
         """
         self.bot = bot
-        console.log(__name__.strip("extensions.") + " Cog Online")
+
+    @commands.Cog.listener()
+    async def on_ready(self):
+        console.log(__name__.replace("extensions.", "") + "Cog Online")
 
     @commands.group(name="help", aliases=["cmds", "commands"])
     async def help_(self, ctx: commands.Context):
@@ -35,10 +38,6 @@ class Help(commands.Cog):
             await ctx.channel.send(embed=embed)
 
             return 0
-
-    @commands.Cog.listener()
-    async def on_ready(self):
-        console.log(__name__.replace("extensions.", "") + "Cog Online")
 
     @help_.command(name="moderation")
     async def moderation(self, ctx: commands.Context):
