@@ -1,0 +1,19 @@
+name: Update Checksums
+
+on:
+  - push
+  - workflow_dispatch
+  
+jobs:
+  write_sums:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v2
+      - name: write checksums
+        run: |
+          find . -type f -not -path "./.git/*" -not -path "./scripts/checksums.txt" -exec sha256sum {} \; > ./scripts/checksums.txt
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with: 
+          commit_message: Update Checksums [norelease]
+          commit_user_email: github-actions@github.com
