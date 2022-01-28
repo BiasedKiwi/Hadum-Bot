@@ -19,7 +19,7 @@ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  ./src/database
 17b7390e69905f9efd36ee57d9b0f1a5b4de048b1487bc8026f16fb2e91addab  ./Pipfile
 1bb9fd61ab8f9e89db866da31e6529edc55b3c510c25b82ac7ca3e4b95d7262e  ./.dockerignore
 c120fcf66128aba414e002b0feea6ce0f6c8897d5477c78f406f9c33efd85f1b  ./.deepsource.toml
-4dd334e2d99a819eb06b6a5583f9cc1d35d2062d17b9ce2f7c95afa42d27cdc8  ./README.md
+c554e2403bdc9ac161312e1e06a3d64d42c6a6aa99635e9bcac32b1fe05f7dc7  ./README.md
 49dd752263c1ef3ef661af08610c9c9a11731f5a82f15df6d5d6975af6697c5a  ./scripts/clear_logs.sh
 7b46afa2c48f97feb211ec3bc8a7dfecbc020bb78da35d63ae31a9c567918aeb  ./scripts/verify.sh
 02e924b2e3d29bddf2a55567a0dad229d84cde47968eda5ccd9b74b6bfcbf72e  ./scripts/run.sh
