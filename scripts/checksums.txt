@@ -34,7 +34,7 @@ fcb0ddfe94f71e3322b396ff48dc2f8425c38c2959862f1424f5c934370390fb  ./.env.example
 a5dcf40213163a936e1aee9e925b65a349b645270c48fba6949861c3200aa102  ./assets/logo.png
 91afe8fb544f70a1c3cebf7eb214c29f409d270d308e138c22ae96f718ecc49c  ./install.sh
 69d638f44706a1dcd55ec5a8dd74956bd7ec1f8809e207fa0cabaf3ef04a7fc2  ./.github/ISSUE_TEMPLATE/feature_request.md
-4aa569e64b6af76aa8ab10a2a1788d10a59024caede0e3f53e51848619dd0902  ./.github/ISSUE_TEMPLATE/BUG.yaml
+9e4bdb1c8bb18a6e6cad79c9e029126a2e9e74cecadc5e9167cbaaf17d5f8a3b  ./.github/ISSUE_TEMPLATE/BUG.yaml
 44fa03e7ebaf9595c130091cd9b9431fa89fbccdb5d4cad2034165209a92ff8f  ./.github/CODEOWNERS
 f201f08dd87c15d62ceabe28f4b53e60c2eb804d016a77c2f6f39a677ddffd30  ./.github/workflows/run_tests.yml
 429745a8bfda6209eaf000c04510e317d9556a792d5f700f7e93933f1c5ca341  ./.github/workflows/format.yml
