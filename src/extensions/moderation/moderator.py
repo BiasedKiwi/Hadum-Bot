@@ -320,7 +320,7 @@ class Moderator(commands.Cog):
         if confirm_msg.content.lower() in ("y", "yes"):
             try:
                 for item in args:  # Ban users
-                    item.ban()
+                    await item.ban()
             except nextcord.Forbidden:
                 await ctx.channel.send(f"Oops! I couldn't ban **{item}**!")
         else:

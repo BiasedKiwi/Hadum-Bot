@@ -9,11 +9,11 @@ pipenv install || pip3 install -r requirements.txt. # Install dependencies with 
 echo "Find your Discord token here: https://discord.com/developers/applications/"
 echo "Find your Reddit info here: https://www.reddit.com/prefs/apps"
 echo "Please input your Discord token below". # Get config info
-read DSC_TOKEN
+read -r DSC_TOKEN
 echo "Please input your Reddit Client secret below"
-read REDDIT_SECRET
+read -r REDDIT_SECRET
 echo "Please input your Reddit Client ID below"
-read REDDIT_ID
+read -r REDDIT_ID
 
 echo "Configuring environment variables..." # Create environment variables
 echo "TOKEN=""$DSC_TOKEN" > .env
