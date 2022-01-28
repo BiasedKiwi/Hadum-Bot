@@ -50,7 +50,7 @@ body:
     attributes:
       label: When did you experience this problem?
       description: So that we know if there was a problem with the Discord API at the moment.
-    validation:
+    validations:
       required: true
   - type: textarea
     id: logs
