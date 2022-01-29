@@ -36,7 +36,7 @@ a5dcf40213163a936e1aee9e925b65a349b645270c48fba6949861c3200aa102  ./assets/logo.
 69d638f44706a1dcd55ec5a8dd74956bd7ec1f8809e207fa0cabaf3ef04a7fc2  ./.github/ISSUE_TEMPLATE/feature_request.md
 9e4bdb1c8bb18a6e6cad79c9e029126a2e9e74cecadc5e9167cbaaf17d5f8a3b  ./.github/ISSUE_TEMPLATE/BUG.yaml
 44fa03e7ebaf9595c130091cd9b9431fa89fbccdb5d4cad2034165209a92ff8f  ./.github/CODEOWNERS
-f201f08dd87c15d62ceabe28f4b53e60c2eb804d016a77c2f6f39a677ddffd30  ./.github/workflows/run_tests.yml
+7f7c1afc3088fcda788b609333a6ad5058ac0cb9d0ba014e4b9ab66cb8b759e6  ./.github/workflows/run_tests.yml
 22c210d28939faf06d26ef510ccba610a5a65443b608219d45d6f2d082cc2b54  ./.github/workflows/format.yml
 a74e76fc3f8d61a07f58bfb62604b8f71e423766e28975c11c514dba0277bc18  ./.github/workflows/release.yml
 80055d271597631d9a8164be047086fa402ad08a5c1ad1c1fa5e6ae7ade09deb  ./.github/workflows/stale.yml
