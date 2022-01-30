@@ -147,7 +147,7 @@ def check_for_updates():
         console.log(
             f"You are running an outdated bot version ({current_ver}). The latest version is {latest_ver}."
         )
-        console.log(f"You can download it at {response.json()['url']}")
+        console.log(f"You can download it at {response.json()['html_url']}")
     elif latest_ver < current_ver:
         console.log(
             "You are running a newer bot version than the latest stable release!"
