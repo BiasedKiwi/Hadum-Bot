@@ -34,7 +34,7 @@ class Miscellaneous(commands.Cog):
         """
         embed = nextcord.Embed(
             title="Pong!",
-            description=f"Current Ping between Discord and the bot: {round(self.bot.latency, 4)}ms",
+            description=f"Current Ping between Discord and the bot: {round(self.bot.latency * 1000)}ms",
         )
         await ctx.channel.send(embed=embed)
 
