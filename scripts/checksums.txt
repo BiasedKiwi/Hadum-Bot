@@ -17,7 +17,7 @@ c4965cfb0bcb4ff3bde2ce43ff3fc21c4b68c406d7a9956408219a555a391dcc  ./src/extensio
 6e5c20071937e14b85c6fff4e58647148d0b503216372f8239a3e7d9c2eb1cb8  ./src/extensions/moderation/moderator.py
 4d7528a7ff3d098545c6fc6ad77e8c4bb088606809125e52a3b2e7b4fb129cd9  ./src/extensions/moderation/admin.py
 bc395e61033f8e47ba10521f0e7c9eaaaae8627dd68c621559f3fb5a460d8004  ./src/extensions/about.py
-cbed0d92f5b3c9ed92a3862c61cf58feec155b3f4cbd6d51b001f4ef6e3697cf  ./src/config.ini
+d2b773090432094c4f480328ab19ad5aec516471d3fd36cf692b665aba5e3033  ./src/config.ini
 7f7c1afc3088fcda788b609333a6ad5058ac0cb9d0ba014e4b9ab66cb8b759e6  ./.github/workflows/run_tests.yml
 80055d271597631d9a8164be047086fa402ad08a5c1ad1c1fa5e6ae7ade09deb  ./.github/workflows/stale.yml
 a74e76fc3f8d61a07f58bfb62604b8f71e423766e28975c11c514dba0277bc18  ./.github/workflows/release.yml
